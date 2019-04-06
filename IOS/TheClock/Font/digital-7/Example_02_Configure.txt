@@ -1,0 +1,7 @@
+<key>UIAppFonts</key>
+	<array>
+		<string>Digital-7.ttf</string>
+		<string>Digital-7Italic.ttf</string>
+		<string>Digital-7MonoItalic.ttf</string>
+		<string>Digital-7Mono.ttf</string>
+	</array>

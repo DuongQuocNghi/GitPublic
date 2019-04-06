@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.mono.ttf">
+            <string>Digital-7Mono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gK8-Gy-4rB">
+                                <rect key="frame" x="82" y="70.666666666666686" width="732" height="273"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iw-sE-kDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="732" height="45.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="FRI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3T-2F-vHF">
+                                                <rect key="frame" x="0.0" y="0.0" width="482" height="45.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="50"/>
+                                                <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="APR 5, 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujT-ab-WDo">
+                                                <rect key="frame" x="482" y="0.0" width="250" height="45.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="50"/>
+                                                <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zt-8l-gAa">
+                                        <rect key="frame" x="0.0" y="45.666666666666643" width="732" height="227.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-Ai-WRf">
+                                                <rect key="frame" x="0.0" y="0.0" width="568.33333333333337" height="227.33333333333334"/>
+                                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="250"/>
+                                                <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-i6-tY2">
+                                                <rect key="frame" x="568.33333333333337" y="0.0" width="163.66666666666663" height="227.33333333333334"/>
+                                                <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="120"/>
+                                                <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gK8-Gy-4rB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="82v-hQ-d85"/>
+                            <constraint firstItem="gK8-Gy-4rB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sne-i7-1GA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Day" destination="ujT-ab-WDo" id="sXq-jS-UP7"/>
+                        <outlet property="DayOWLable" destination="ujT-ab-WDo" id="hIX-2p-HgS"/>
+                        <outlet property="Secondary" destination="PJi-i6-tY2" id="4Xy-OI-yjo"/>
+                        <outlet property="TimeLable" destination="5fL-Ai-WRf" id="u3t-n6-2X1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.60714285714286" y="131.8840579710145"/>
+        </scene>
+    </scenes>
+</document>
