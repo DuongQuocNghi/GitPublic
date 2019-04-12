@@ -41,9 +41,41 @@ class ViewController: UIViewController {
         
 //        UseWhilePrintDate(num:_num)
 //        UseWhilePrintNumber(num:_num)
-        ParserTimeFromSecondary(secondary:_num)
+//        ParserTimeFromSecondary(secondary:_num)
+//        SumN(num:_num)
+        FindTheDivisor(num:_num)
         
         input.text = nil
+    }
+    
+    func FindTheDivisor(num:Int!) {
+        var n:Int! = num
+        
+        while n >= 1{
+            n-=1
+            
+            if(num % n == 0){
+                output.text = "Ước số lẻ lớn nhất của \(input.text!) là \(n!)"
+                return
+            }
+            
+        }
+    }
+    
+    func SumN(num:Int!) {
+        var i = 1
+        var r = 0
+        
+        while i <= num{
+            if(r == 0){
+                r += 1*i
+            }else{
+                r += r*i
+            }
+            i += 1
+        }
+        
+        output.text = "S(\(input.text!)) = \(r)"
     }
     
     func  ParserTimeFromSecondary(secondary s:Int!) {
