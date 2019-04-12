@@ -40,10 +40,10 @@ class ViewController: UIViewController {
         output.text = nil
         
 //        UseWhilePrintDate(num:_num)
-//        UseWhilePrintNumber(num:_num)
+        UseWhilePrintNumber(num:_num)
 //        ParserTimeFromSecondary(secondary:_num)
 //        SumN(num:_num)
-        FindTheDivisor(num:_num)
+//        FindTheDivisor(num:_num)
         
         input.text = nil
     }
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         while n >= 1{
             n-=1
             
-            if(num % n == 0){
+            if(n%2==1 && num % n == 0){
                 output.text = "Ước số lẻ lớn nhất của \(input.text!) là \(n!)"
                 return
             }
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
     }
     
     func  UseWhilePrintNumber(num:Int!) {
-        var i = 1;
+        var i = 2;
         var str = ""
         
         output.text = "Đang xử lý..."
@@ -138,7 +138,7 @@ class ViewController: UIViewController {
                 str += " [\(i)] "
             }
             
-            i += 1;
+            i += 2;
         }
         
         output.text = str
