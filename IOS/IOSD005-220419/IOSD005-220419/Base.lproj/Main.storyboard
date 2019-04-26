@@ -214,8 +214,35 @@
             </objects>
             <point key="canvasLocation" x="-78.260869565217391" y="132.58928571428572"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="B5j-Eu-t1B">
+            <objects>
+                <viewController id="tc3-gM-CZg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uUS-fc-PF7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2850.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="aNU-fO-diK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91337895393371582" green="0.92143708467483521" blue="0.9337923526763916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aNU-fO-diK" firstAttribute="leading" secondItem="ReC-eO-XaQ" secondAttribute="leading" id="JyA-cy-GHy"/>
+                            <constraint firstItem="ReC-eO-XaQ" firstAttribute="trailing" secondItem="aNU-fO-diK" secondAttribute="trailing" id="YPv-kE-cbw"/>
+                            <constraint firstItem="ReC-eO-XaQ" firstAttribute="bottom" secondItem="aNU-fO-diK" secondAttribute="bottom" id="Ywb-AV-NuX"/>
+                            <constraint firstItem="aNU-fO-diK" firstAttribute="top" secondItem="ReC-eO-XaQ" secondAttribute="top" id="aD0-oZ-Xti"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ReC-eO-XaQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNR-kb-T0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.52173913043487" y="136.60714285714286"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="IMG_2850.PNG" width="750" height="1334"/>
         <image name="ScreenWhite.png" width="172" height="176"/>
         <image name="ic_facebook" width="150" height="150"/>
     </resources>
