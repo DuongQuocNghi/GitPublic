@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,26 +15,26 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheClock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TheClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cI0-2C-lmb">
-                                <rect key="frame" x="82" y="55.333333333333343" width="732" height="303.33333333333326"/>
+                                <rect key="frame" x="177.5" y="82.5" width="541.5" height="249"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-Ai-WRf">
-                                        <rect key="frame" x="0.0" y="76.000000000000014" width="568.33333333333337" height="227.33333333333337"/>
-                                        <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="250"/>
+                                        <rect key="frame" x="0.0" y="76" width="432" height="173"/>
+                                        <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="190"/>
                                         <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-i6-tY2">
-                                        <rect key="frame" x="568.33333333333337" y="169.33333333333331" width="163.66666666666663" height="109"/>
-                                        <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="120"/>
+                                        <rect key="frame" x="432" y="156" width="109.5" height="73"/>
+                                        <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="80"/>
                                         <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -45,7 +45,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APR 5, 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujT-ab-WDo">
-                                        <rect key="frame" x="482" y="0.0" width="250" height="46"/>
+                                        <rect key="frame" x="291.5" y="0.0" width="250" height="46"/>
                                         <fontDescription key="fontDescription" name="Digital-7Mono" family="Digital-7 Mono" pointSize="50"/>
                                         <color key="textColor" red="0.23123889440000001" green="0.84123501710000004" blue="0.16822794429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                     <constraint firstItem="5fL-Ai-WRf" firstAttribute="leading" secondItem="cI0-2C-lmb" secondAttribute="leading" id="QrR-7F-QHa"/>
                                     <constraint firstItem="G3T-2F-vHF" firstAttribute="top" secondItem="cI0-2C-lmb" secondAttribute="top" id="UXv-ti-16p"/>
                                     <constraint firstItem="ujT-ab-WDo" firstAttribute="top" secondItem="cI0-2C-lmb" secondAttribute="top" id="XRm-Zw-ds0"/>
-                                    <constraint firstAttribute="bottom" secondItem="PJi-i6-tY2" secondAttribute="bottom" constant="25" id="bPb-Je-Um0"/>
+                                    <constraint firstAttribute="bottom" secondItem="PJi-i6-tY2" secondAttribute="bottom" constant="20" id="bPb-Je-Um0"/>
                                     <constraint firstAttribute="trailing" secondItem="ujT-ab-WDo" secondAttribute="trailing" id="pa3-4p-2x7"/>
                                     <constraint firstItem="G3T-2F-vHF" firstAttribute="leading" secondItem="cI0-2C-lmb" secondAttribute="leading" id="xYU-NP-vFR"/>
                                     <constraint firstAttribute="trailing" secondItem="PJi-i6-tY2" secondAttribute="trailing" id="zB2-26-S6T"/>
@@ -69,7 +69,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cI0-2C-lmb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Gm-I7-Ymw"/>
                             <constraint firstItem="cI0-2C-lmb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EL3-gA-g1V"/>
                             <constraint firstItem="cI0-2C-lmb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nof-SH-1Ha"/>
                         </constraints>
