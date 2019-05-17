@@ -22,10 +22,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbDoanhT: UILabel!
     @IBOutlet weak var lbPhanTHH: UILabel!
     @IBOutlet weak var lbSanL: UILabel!
+    @IBOutlet weak var tfName: UITextField!
+    
+    var thongTinNhanVien:NhanVien?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        tfName.text = thongTinNhanVien?.Name
+        tfLoai.text = thongTinNhanVien?.Loai
     }
     
     @IBAction func actionTinhLuong(_ sender: Any) {
