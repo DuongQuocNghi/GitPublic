@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842303222292D0EF004591F9 /* CongViecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842303212292D0EF004591F9 /* CongViecViewController.swift */; };
 		849B8BEE22897985009B80C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B8BED22897985009B80C6 /* AppDelegate.swift */; };
 		849B8BF022897985009B80C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B8BEF22897985009B80C6 /* ViewController.swift */; };
 		849B8BF322897985009B80C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B8BF122897985009B80C6 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842303212292D0EF004591F9 /* CongViecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongViecViewController.swift; sourceTree = "<group>"; };
 		849B8BEA22897985009B80C6 /* BTIOS-100519.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTIOS-100519.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B8BED22897985009B80C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849B8BEF22897985009B80C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				84B1F630228C48A1005935A6 /* ThongTinNhanVienViewController.swift */,
 				84B1F632228C534A005935A6 /* NhanVien.swift */,
 				84FDD5F1228ED80600263352 /* NhanViewUtils.swift */,
+				842303212292D0EF004591F9 /* CongViecViewController.swift */,
 			);
 			path = "BTIOS-100519";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				84B1F633228C534A005935A6 /* NhanVien.swift in Sources */,
 				84FDD5F2228ED80600263352 /* NhanViewUtils.swift in Sources */,
 				84B1F62F228C36E1005935A6 /* TinhLuongUtils.swift in Sources */,
+				842303222292D0EF004591F9 /* CongViecViewController.swift in Sources */,
 				849B8BEE22897985009B80C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

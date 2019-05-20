@@ -16,7 +16,8 @@ class NhanVien {
     var Address:String?
     var StartDate:String?
     var Birthday:String?
-    
+    var CongViec:PhanCong?
+
     init(id:String = "",name:String = "", loai:String = "", sex:String = "",address:String = "",startDate:String = "",birthday:String = "" ) {
         Name = name
         Loai = loai
@@ -26,4 +27,17 @@ class NhanVien {
         Birthday = birthday
         ID = id
     }
+    
+    class PhanCong {
+        init(phongBan:String = "",chucVu:String = "", congViec:String = "") {
+            PhongBan = phongBan
+            ChucVu = chucVu
+            CongViec = congViec
+        }
+        
+        var PhongBan:String?
+        var ChucVu:String?
+        var CongViec:String?
+    }
+
 }
