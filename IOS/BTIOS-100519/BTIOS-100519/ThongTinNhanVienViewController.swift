@@ -18,7 +18,7 @@ class ThongTinNhanVienViewController: UIViewController {
     @IBOutlet weak var tfAddress: UITextField!
     @IBOutlet weak var tfBirthday: UITextField!
     @IBOutlet weak var tfID: UITextField!
-    
+ 
     let nhanVienUtils=NhanViewUtils()
     
     override func viewDidLoad() {
