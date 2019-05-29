@@ -14,6 +14,6 @@ class SPThucAnModel: SanPhamModel {
     
     init(_ name: String, _ gia: Double, _ moTa: String, _ hinhAnh: String,thucAnNhanh : Bool = false ) {
         super.init(name, gia, moTa, hinhAnh)
-        
+        ThucAnNhanh = thucAnNhanh
     }
 }
