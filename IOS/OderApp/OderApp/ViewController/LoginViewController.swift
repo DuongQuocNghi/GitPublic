@@ -17,7 +17,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func actLogin(_ sender: Any) {
-        if let viewHome = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController {
+//        if let viewHome = self.storyboard?.instantiateViewController(withIdentifier: "Home") as? HomeViewController {
+//            present(viewHome, animated: true, completion: nil)
+//        }
+        if let viewHome = self.storyboard?.instantiateViewController(withIdentifier: "TabHome") {
             present(viewHome, animated: true, completion: nil)
         }
     }

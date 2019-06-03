@@ -18,14 +18,22 @@ class HomeViewController2: UIViewController, UITableViewDataSource, UITableViewD
         sanPhamUtils.dumpData()
 
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sp = sanPhamUtils.sanPhamThucAnList[indexPath.row]
+        var chiTiet = storyboard?.instantiateViewController(withIdentifier: "ChiTietSP") as? ChiTietSanPhamViewController
+        chiTiet?.Data = sp
+        chiTiet?.modalPresentationStyle = .custom
+        present(chiTiet!, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SanPhamItem") as? SanPhamTableViewCell
         
         let value = sanPhamUtils.sanPhamThucAnList[indexPath.row]
         
-//        cell?.Hinh?.downloaded(from: value.Hinh!)
+        cell?.Hinh?.image = UIImage(named: value.Hinh!)
         cell?.DatTruoc?.isHidden = value.ThucAnNhanh!
         cell?.Ten?.text = value.Ten
         cell?.Gia?.text = String(value.GiaTien!)

@@ -11,6 +11,10 @@
 		843AA1F5229EBF46002944F2 /* SanPhamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F4229EBF46002944F2 /* SanPhamTableViewCell.swift */; };
 		843AA1F7229EC6BD002944F2 /* HomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */; };
 		843AA1FA229ECC0F002944F2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F9229ECC0F002944F2 /* UIImage.swift */; };
+		8488B0B122A16021000A8741 /* hinh_com_tam.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0AD22A16020000A8741 /* hinh_com_tam.jpg */; };
+		8488B0B222A16021000A8741 /* hinh_cafe_trung_nguyen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */; };
+		8488B0B322A16021000A8741 /* hinh_cafe_da.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */; };
+		8488B0B422A16021000A8741 /* hinh_banh_mi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0B022A16021000A8741 /* hinh_banh_mi.jpg */; };
 		84BD45A9229824AE001697DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD45A8229824AE001697DB /* AppDelegate.swift */; };
 		84BD45AB229824AE001697DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD45AA229824AE001697DB /* ViewController.swift */; };
 		84BD45AE229824AE001697DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BD45AC229824AE001697DB /* Main.storyboard */; };
@@ -23,6 +27,7 @@
 		84E343D4229C110E00B9A85B /* SanPhamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E343D3229C110E00B9A85B /* SanPhamModel.swift */; };
 		84E343D6229C114700B9A85B /* SPNuocModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E343D5229C114700B9A85B /* SPNuocModel.swift */; };
 		84E343D9229C117500B9A85B /* SPThucAnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E343D8229C117500B9A85B /* SPThucAnModel.swift */; };
+		84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,10 @@
 		843AA1F4229EBF46002944F2 /* SanPhamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPhamTableViewCell.swift; sourceTree = "<group>"; };
 		843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController2.swift; sourceTree = "<group>"; };
 		843AA1F9229ECC0F002944F2 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8488B0AD22A16020000A8741 /* hinh_com_tam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_com_tam.jpg; sourceTree = "<group>"; };
+		8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_trung_nguyen.jpg; sourceTree = "<group>"; };
+		8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_da.jpg; sourceTree = "<group>"; };
+		8488B0B022A16021000A8741 /* hinh_banh_mi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_banh_mi.jpg; sourceTree = "<group>"; };
 		84BD45A5229824AE001697DB /* OderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BD45A8229824AE001697DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BD45AA229824AE001697DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +53,7 @@
 		84E343D3229C110E00B9A85B /* SanPhamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPhamModel.swift; sourceTree = "<group>"; };
 		84E343D5229C114700B9A85B /* SPNuocModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPNuocModel.swift; sourceTree = "<group>"; };
 		84E343D8229C117500B9A85B /* SPThucAnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPThucAnModel.swift; sourceTree = "<group>"; };
+		84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietSanPhamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,17 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8488B0AC22A16007000A8741 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8488B0B022A16021000A8741 /* hinh_banh_mi.jpg */,
+				8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */,
+				8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */,
+				8488B0AD22A16020000A8741 /* hinh_com_tam.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		84BD459C229824AE001697DB = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +121,7 @@
 		84BD45A7229824AE001697DB /* OderApp */ = {
 			isa = PBXGroup;
 			children = (
+				8488B0AC22A16007000A8741 /* Resource */,
 				843AA1F8229ECBFD002944F2 /* Extension */,
 				843AA1F3229EBF15002944F2 /* Utils */,
 				843AA1F2229EBF06002944F2 /* ViewCell */,
@@ -133,6 +155,7 @@
 				84BD45BE22982BE0001697DB /* RegisterViewController.swift */,
 				84BD45C022982E26001697DB /* HomeViewController.swift */,
 				843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */,
+				84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -195,9 +218,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488B0B322A16021000A8741 /* hinh_cafe_da.jpg in Resources */,
+				8488B0B422A16021000A8741 /* hinh_banh_mi.jpg in Resources */,
 				84BD45B3229824AF001697DB /* LaunchScreen.storyboard in Resources */,
+				8488B0B122A16021000A8741 /* hinh_com_tam.jpg in Resources */,
 				84BD45B0229824AF001697DB /* Assets.xcassets in Resources */,
 				84BD45AE229824AE001697DB /* Main.storyboard in Resources */,
+				8488B0B222A16021000A8741 /* hinh_cafe_trung_nguyen.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +243,7 @@
 				843AA1F1229EAB2D002944F2 /* SanPhamUtils.swift in Sources */,
 				84BD45BB22982BC5001697DB /* WecomelViewController.swift in Sources */,
 				84BD45AB229824AE001697DB /* ViewController.swift in Sources */,
+				84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */,
 				84BD45A9229824AE001697DB /* AppDelegate.swift in Sources */,
 				84E343D4229C110E00B9A85B /* SanPhamModel.swift in Sources */,
 				84BD45C122982E26001697DB /* HomeViewController.swift in Sources */,

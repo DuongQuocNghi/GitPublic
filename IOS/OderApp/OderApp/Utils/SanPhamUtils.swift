@@ -14,10 +14,10 @@ class SanPhamUtils {
     var sanPhamThucAnList = [SPThucAnModel]()
     
     func dumpData() {
-        ThemSP(SanPhamModel("Cà phê Trung nguyên", 95000, "Cà phê của sự giàu có và hạnh phúc", "https://bitly.vn/49s8"))
-        ThemSP(SPThucAnModel("Bánh mì", 20000, "Bánh mì Hà Nội", "https://bitly.vn/45bg",thucAnNhanh: true))
-        ThemSP(SPThucAnModel("Cơm tắm", 25000, "Cơm tắm bình dân", "https://bitly.vn/49rq"))
-        ThemSP(SPNuocModel("Cà phê đá", 20000, "Cà phê Sài Gòn Xưa", "https://bitly.vn/45bt",luongDa: 0))
+        ThemSP(SanPhamModel("Cà phê Trung nguyên", 95000, "Cà phê của sự giàu có và hạnh phúc", "hinh_cafe_trung_nguyen.jpg"))
+        ThemSP(SPThucAnModel("Bánh mì", 20000, "Bánh mì Hà Nội", "hinh_banh_mi.jpg",thucAnNhanh: true))
+        ThemSP(SPThucAnModel("Cơm tắm", 25000, "Cơm tắm bình dân", "hinh_com_tam.jpg"))
+        ThemSP(SPNuocModel("Cà phê đá", 20000, "Cà phê Sài Gòn Xưa", "hinh_cafe_da.jpg",luongDa: 0))
     }
     
     

@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let value = sanPhamUtils.sanPhamNuocList[indexPath.row]
         
-//        cell?.Hinh?.image = UIImage()
+        cell?.Hinh?.image = UIImage(named: value.Hinh!)
         cell?.Ten?.text = value.Ten
         cell?.Gia?.text = String(value.GiaTien!)
         cell?.Mota?.text = value.Mota
