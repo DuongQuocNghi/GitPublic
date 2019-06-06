@@ -17,6 +17,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return sanPhamUtils.sanPhamNuocList.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sp = sanPhamUtils.sanPhamNuocList[indexPath.row]
+        var chiTiet = storyboard?.instantiateViewController(withIdentifier: "ChiTietSP") as? ChiTietSanPhamViewController
+        chiTiet?.Data = sp
+        chiTiet?.modalPresentationStyle = .custom
+        present(chiTiet!, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SanPhamItem") as? SanPhamTableViewCell
         

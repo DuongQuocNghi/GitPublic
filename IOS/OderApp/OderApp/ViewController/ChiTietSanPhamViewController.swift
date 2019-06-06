@@ -21,7 +21,7 @@ class ChiTietSanPhamViewController: UIViewController {
     @IBOutlet weak var SizeLon: UIButton!
     
     var Size = SizeSanPham.Vua
-    var Data : SPThucAnModel?
+    var Data : SanPhamModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,15 @@ class ChiTietSanPhamViewController: UIViewController {
         SetSize(size: .Lon)
         UpdateGia()
         SetupData()
+        
+        if Data is SPNuocModel{
+            Data = Data as? SPNuocModel
+            SizeNho.setTitle("200ml", for: .normal)
+            SizeVua.setTitle("500ml", for: .normal)
+            SizeLon.setTitle("1000ml", for: .normal)
+        } else if Data is SPThucAnModel{
+            Data = Data as? SPThucAnModel
+        }
         // Do any additional setup after loading the view.
     }
     
