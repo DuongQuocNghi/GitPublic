@@ -15,6 +15,7 @@
 		8488B0B222A16021000A8741 /* hinh_cafe_trung_nguyen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */; };
 		8488B0B322A16021000A8741 /* hinh_cafe_da.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */; };
 		8488B0B422A16021000A8741 /* hinh_banh_mi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8488B0B022A16021000A8741 /* hinh_banh_mi.jpg */; };
+		8492CA6C22B12E47003E9905 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492CA6B22B12E47003E9905 /* NewsViewController.swift */; };
 		84BD45A9229824AE001697DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD45A8229824AE001697DB /* AppDelegate.swift */; };
 		84BD45AB229824AE001697DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD45AA229824AE001697DB /* ViewController.swift */; };
 		84BD45AE229824AE001697DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BD45AC229824AE001697DB /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 		84E343D6229C114700B9A85B /* SPNuocModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E343D5229C114700B9A85B /* SPNuocModel.swift */; };
 		84E343D9229C117500B9A85B /* SPThucAnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E343D8229C117500B9A85B /* SPThucAnModel.swift */; };
 		84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */; };
+		84F67A8422AE847F00C85CF0 /* HomeViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */; };
+		84F67A8622AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,7 @@
 		8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_trung_nguyen.jpg; sourceTree = "<group>"; };
 		8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_da.jpg; sourceTree = "<group>"; };
 		8488B0B022A16021000A8741 /* hinh_banh_mi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_banh_mi.jpg; sourceTree = "<group>"; };
+		8492CA6B22B12E47003E9905 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		84BD45A5229824AE001697DB /* OderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BD45A8229824AE001697DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BD45AA229824AE001697DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		84E343D5229C114700B9A85B /* SPNuocModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPNuocModel.swift; sourceTree = "<group>"; };
 		84E343D8229C117500B9A85B /* SPThucAnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPThucAnModel.swift; sourceTree = "<group>"; };
 		84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietSanPhamViewController.swift; sourceTree = "<group>"; };
+		84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController3.swift; sourceTree = "<group>"; };
+		84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSanPhamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,9 @@
 				84BD45C022982E26001697DB /* HomeViewController.swift */,
 				843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */,
 				84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */,
+				84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */,
+				8492CA6B22B12E47003E9905 /* NewsViewController.swift */,
+				84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -238,14 +247,17 @@
 				843AA1F7229EC6BD002944F2 /* HomeViewController2.swift in Sources */,
 				84BD45BD22982BCF001697DB /* LoginViewController.swift in Sources */,
 				84E343D6229C114700B9A85B /* SPNuocModel.swift in Sources */,
+				84F67A8422AE847F00C85CF0 /* HomeViewController3.swift in Sources */,
 				84BD45BF22982BE0001697DB /* RegisterViewController.swift in Sources */,
 				843AA1F5229EBF46002944F2 /* SanPhamTableViewCell.swift in Sources */,
+				8492CA6C22B12E47003E9905 /* NewsViewController.swift in Sources */,
 				843AA1F1229EAB2D002944F2 /* SanPhamUtils.swift in Sources */,
 				84BD45BB22982BC5001697DB /* WecomelViewController.swift in Sources */,
 				84BD45AB229824AE001697DB /* ViewController.swift in Sources */,
 				84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */,
 				84BD45A9229824AE001697DB /* AppDelegate.swift in Sources */,
 				84E343D4229C110E00B9A85B /* SanPhamModel.swift in Sources */,
+				84F67A8622AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift in Sources */,
 				84BD45C122982E26001697DB /* HomeViewController.swift in Sources */,
 				843AA1FA229ECC0F002944F2 /* UIImage.swift in Sources */,
 				84E343D9229C117500B9A85B /* SPThucAnModel.swift in Sources */,
