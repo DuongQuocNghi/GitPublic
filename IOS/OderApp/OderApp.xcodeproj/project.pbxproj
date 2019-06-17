@@ -31,6 +31,7 @@
 		84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */; };
 		84F67A8422AE847F00C85CF0 /* HomeViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */; };
 		84F67A8622AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */; };
+		84F8F02622B3C67700150D62 /* FunctionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8F02522B3C67700150D62 /* FunctionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietSanPhamViewController.swift; sourceTree = "<group>"; };
 		84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController3.swift; sourceTree = "<group>"; };
 		84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSanPhamCollectionViewCell.swift; sourceTree = "<group>"; };
+		84F8F02522B3C67700150D62 /* FunctionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,9 @@
 		843AA1F2229EBF06002944F2 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */,
 				843AA1F4229EBF46002944F2 /* SanPhamTableViewCell.swift */,
+				84F8F02522B3C67700150D62 /* FunctionCollectionViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -164,7 +168,6 @@
 				84F4CB3922A5494000BCC0F8 /* ChiTietSanPhamViewController.swift */,
 				84F67A8322AE847F00C85CF0 /* HomeViewController3.swift */,
 				8492CA6B22B12E47003E9905 /* NewsViewController.swift */,
-				84F67A8522AE84AB00C85CF0 /* ItemSanPhamCollectionViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F8F02622B3C67700150D62 /* FunctionCollectionViewCell.swift in Sources */,
 				843AA1F7229EC6BD002944F2 /* HomeViewController2.swift in Sources */,
 				84BD45BD22982BCF001697DB /* LoginViewController.swift in Sources */,
 				84E343D6229C114700B9A85B /* SPNuocModel.swift in Sources */,

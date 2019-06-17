@@ -21,6 +21,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let value = dataSource[indexPath.row]
         var cell : UICollectionViewCell?
         
+//        cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemFunction", for: indexPath)
+        
         switch value.DataType {
         case .Function:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemFunction", for: indexPath)
@@ -30,11 +32,11 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             break;
         case .Propose:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemPropose", for: indexPath)
-            
+
             break;
         case .News:
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemNews", for: indexPath)
-            
+
             break;
         }
        
@@ -43,9 +45,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //        cell?.Size.text = "nhỏ"
 //        cell?.Gia.text = String(value.GiaTien!)
         
+
         return cell!
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+            }
 
     
     
