@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8411B5D422BA5AE100AE653A /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411B5D322BA5AE100AE653A /* SQLiteDatabase.swift */; };
 		843AA1F1229EAB2D002944F2 /* SanPhamUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F0229EAB2D002944F2 /* SanPhamUtils.swift */; };
 		843AA1F5229EBF46002944F2 /* SanPhamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F4229EBF46002944F2 /* SanPhamTableViewCell.swift */; };
 		843AA1F7229EC6BD002944F2 /* HomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */; };
@@ -35,10 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8411B5D322BA5AE100AE653A /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		8411B5D522BA620C00AE653A /* OderApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = OderApp.db; path = SQL/OderApp.db; sourceTree = SOURCE_ROOT; };
 		843AA1F0229EAB2D002944F2 /* SanPhamUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPhamUtils.swift; sourceTree = "<group>"; };
 		843AA1F4229EBF46002944F2 /* SanPhamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanPhamTableViewCell.swift; sourceTree = "<group>"; };
 		843AA1F6229EC6BD002944F2 /* HomeViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController2.swift; sourceTree = "<group>"; };
 		843AA1F9229ECC0F002944F2 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8468A67222BD0028004218AA /* TestAppDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestAppDB.db; sourceTree = "<group>"; };
 		8488B0AD22A16020000A8741 /* hinh_com_tam.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_com_tam.jpg; sourceTree = "<group>"; };
 		8488B0AE22A16020000A8741 /* hinh_cafe_trung_nguyen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_trung_nguyen.jpg; sourceTree = "<group>"; };
 		8488B0AF22A16020000A8741 /* hinh_cafe_da.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hinh_cafe_da.jpg; sourceTree = "<group>"; };
@@ -75,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8411B5D222BA5AB600AE653A /* Db */ = {
+			isa = PBXGroup;
+			children = (
+				8468A67222BD0028004218AA /* TestAppDB.db */,
+				8411B5D522BA620C00AE653A /* OderApp.db */,
+				8411B5D322BA5AE100AE653A /* SQLiteDatabase.swift */,
+			);
+			path = Db;
+			sourceTree = "<group>";
+		};
 		843AA1F2229EBF06002944F2 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +145,7 @@
 		84BD45A7229824AE001697DB /* OderApp */ = {
 			isa = PBXGroup;
 			children = (
+				8411B5D222BA5AB600AE653A /* Db */,
 				8488B0AC22A16007000A8741 /* Resource */,
 				843AA1F8229ECBFD002944F2 /* Extension */,
 				843AA1F3229EBF15002944F2 /* Utils */,
@@ -257,6 +272,7 @@
 				8492CA6C22B12E47003E9905 /* NewsViewController.swift in Sources */,
 				843AA1F1229EAB2D002944F2 /* SanPhamUtils.swift in Sources */,
 				84BD45BB22982BC5001697DB /* WecomelViewController.swift in Sources */,
+				8411B5D422BA5AE100AE653A /* SQLiteDatabase.swift in Sources */,
 				84BD45AB229824AE001697DB /* ViewController.swift in Sources */,
 				84F4CB3A22A5494000BCC0F8 /* ChiTietSanPhamViewController.swift in Sources */,
 				84BD45A9229824AE001697DB /* AppDelegate.swift in Sources */,
