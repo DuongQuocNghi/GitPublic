@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8408C67722CCD8980003D57D /* NhomCoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C67622CCD8980003D57D /* NhomCoViewCell.swift */; };
+		8408C67A22CCE3530003D57D /* PhongTap+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C67822CCE3530003D57D /* PhongTap+CoreDataClass.swift */; };
+		8408C67B22CCE3530003D57D /* PhongTap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C67922CCE3530003D57D /* PhongTap+CoreDataProperties.swift */; };
+		8408C67F22CCE3A30003D57D /* PhongTapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C67E22CCE3A30003D57D /* PhongTapUtils.swift */; };
+		8408C68122CCE8AD0003D57D /* GYMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C68022CCE8AD0003D57D /* GYMCollectionViewCell.swift */; };
+		8408C68322CCEA480003D57D /* PhongTapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8408C68222CCEA480003D57D /* PhongTapViewCell.swift */; };
 		843CFC4322C65225008047B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CFC4222C65225008047B2 /* AppDelegate.swift */; };
 		843CFC4822C65225008047B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843CFC4622C65225008047B2 /* Main.storyboard */; };
 		843CFC4A22C65226008047B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843CFC4922C65226008047B2 /* Assets.xcassets */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8408C67622CCD8980003D57D /* NhomCoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoViewCell.swift; sourceTree = "<group>"; };
+		8408C67822CCE3530003D57D /* PhongTap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhongTap+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8408C67922CCE3530003D57D /* PhongTap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhongTap+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8408C67E22CCE3A30003D57D /* PhongTapUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongTapUtils.swift; sourceTree = "<group>"; };
+		8408C68022CCE8AD0003D57D /* GYMCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYMCollectionViewCell.swift; sourceTree = "<group>"; };
+		8408C68222CCEA480003D57D /* PhongTapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhongTapViewCell.swift; sourceTree = "<group>"; };
 		843CFC3F22C65225008047B2 /* AppJEFIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppJEFIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843CFC4222C65225008047B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		843CFC4722C65225008047B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +60,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8408C67C22CCE3650003D57D /* NhomCo */ = {
+			isa = PBXGroup;
+			children = (
+				84A4A7C622CA4204003B9F11 /* NhomCo+CoreDataClass.swift */,
+				84A4A7C722CA4204003B9F11 /* NhomCo+CoreDataProperties.swift */,
+				84D61CA722CA317900DA082A /* NhomCoUtils.swift */,
+			);
+			path = NhomCo;
+			sourceTree = "<group>";
+		};
+		8408C67D22CCE3730003D57D /* PhongTap */ = {
+			isa = PBXGroup;
+			children = (
+				8408C67822CCE3530003D57D /* PhongTap+CoreDataClass.swift */,
+				8408C67922CCE3530003D57D /* PhongTap+CoreDataProperties.swift */,
+				8408C67E22CCE3A30003D57D /* PhongTapUtils.swift */,
+			);
+			path = PhongTap;
+			sourceTree = "<group>";
+		};
 		843CFC3622C65225008047B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				843CFC5722C65B1A008047B2 /* ExercisesViewController.swift */,
+				8408C68022CCE8AD0003D57D /* GYMCollectionViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -92,6 +125,8 @@
 		843CFC5922C65B50008047B2 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				8408C67622CCD8980003D57D /* NhomCoViewCell.swift */,
+				8408C68222CCEA480003D57D /* PhongTapViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -124,9 +159,8 @@
 		84D61CA622CA313D00DA082A /* Db */ = {
 			isa = PBXGroup;
 			children = (
-				84A4A7C622CA4204003B9F11 /* NhomCo+CoreDataClass.swift */,
-				84A4A7C722CA4204003B9F11 /* NhomCo+CoreDataProperties.swift */,
-				84D61CA722CA317900DA082A /* NhomCoUtils.swift */,
+				8408C67D22CCE3730003D57D /* PhongTap */,
+				8408C67C22CCE3650003D57D /* NhomCo */,
 			);
 			path = Db;
 			sourceTree = "<group>";
@@ -202,12 +236,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8408C68322CCEA480003D57D /* PhongTapViewCell.swift in Sources */,
+				8408C67B22CCE3530003D57D /* PhongTap+CoreDataProperties.swift in Sources */,
 				84A4A7C822CA4204003B9F11 /* NhomCo+CoreDataClass.swift in Sources */,
+				8408C68122CCE8AD0003D57D /* GYMCollectionViewCell.swift in Sources */,
+				8408C67A22CCE3530003D57D /* PhongTap+CoreDataClass.swift in Sources */,
 				84D61CA022CA2F7800DA082A /* JEFITData.xcdatamodeld in Sources */,
 				84A4A7CB22CA4BA5003B9F11 /* NhomCoModel.swift in Sources */,
+				8408C67F22CCE3A30003D57D /* PhongTapUtils.swift in Sources */,
 				843CFC4322C65225008047B2 /* AppDelegate.swift in Sources */,
 				843CFC5822C65B1A008047B2 /* ExercisesViewController.swift in Sources */,
 				84D61CA822CA317900DA082A /* NhomCoUtils.swift in Sources */,
+				8408C67722CCD8980003D57D /* NhomCoViewCell.swift in Sources */,
 				84A4A7C922CA4204003B9F11 /* NhomCo+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

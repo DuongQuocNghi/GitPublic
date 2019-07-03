@@ -5,7 +5,19 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PhongTap" representedClassName="PhongTap" syncable="YES">
+        <attribute name="danhGia" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diaChi" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gioMoCua" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hinh" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="long" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="soDienThoai" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="NhomCo" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="PhongTap" positionX="-54" positionY="18" width="128" height="180"/>
     </elements>
 </model>

@@ -11,20 +11,29 @@ import UIKit
 class ExercisesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return nhomCoList!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var x = nhomCoList![indexPath.row]
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Item", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NhomCoViewCell", for: indexPath) as! NhomCoViewCell
+        
+        cell.Hinh.image = UIImage(named: x.hinh ?? "bp_f_back")
         
         return cell
     }
-    
+
+    var nhomCoUtils : NhomCoUtils?
+    var nhomCoList : [NhomCo]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nhomCoUtils = NhomCoUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
+        
+        nhomCoList = nhomCoUtils?.getAll()
+        
         // Do any additional setup after loading the view.
     }
     
