@@ -21,13 +21,13 @@ class PhongTapUtils {
     
     func initData() {
         if(getAll().count == 0){
-            themPhongTap(id: 0, ten: "California Fitness & Yoga Quận 3", hinh: "gym_1", diaChi: "Tầng 2 Toà nhà Lim Tower II Số, 62A Đường Cách Mạng Tháng 8", gioMoCua: "Mở cửa đến 23:00", danhGia: 3.9, lat: 10.778966, long: 106.6880843, soDienThoai: nil)
+            themPhongTap(id: 0, ten: "California Fitness & Yoga Quận 3", hinh: "gym_1", diaChi: "Tầng 2 Toà nhà Lim Tower II Số, 62A Đường Cách Mạng Tháng 8", gioMoCua: "Mở cửa đến 23:00", danhGia: 3.9, lat: 10.777312, long: 106.684690, soDienThoai: "0927 443 712")
             
-            themPhongTap(id: 0, ten: "MMA GYM FITNESS CENTER", hinh: "gym_2", diaChi: "Phòng tập thể dục đấm bốc - 285 Võ Văn Tần", gioMoCua: "Đóng cửa lúc 21:30", danhGia: 4.7, lat: 10.7790079, long: 106.6880843, soDienThoai: nil)
+            themPhongTap(id: 0, ten: "MMA GYM FITNESS CENTER", hinh: "gym_2", diaChi: "Phòng tập thể dục đấm bốc - 285 Võ Văn Tần", gioMoCua: "Đóng cửa lúc 21:30", danhGia: 4.7, lat: 10.778429, long: 106.687190, soDienThoai: "0711 346 222")
             
-            themPhongTap(id: 0, ten: "Fit24 - Fitness & Yoga Center", hinh: "gym_3", diaChi: "Phòng tập thể dục - 02 Hồ Xuân Hương", gioMoCua: "Đóng cửa lúc 22:00", danhGia: 4.0, lat: 10.7837717, long: 106.6819904, soDienThoai: nil)
+            themPhongTap(id: 0, ten: "Fit24 - Fitness & Yoga Center", hinh: "gym_3", diaChi: "Phòng tập thể dục - 02 Hồ Xuân Hương", gioMoCua: "Đóng cửa lúc 22:00", danhGia: 4.0, lat: 10.775910, long: 106.687866, soDienThoai: "0563 222 374")
 
-            themPhongTap(id: 0, ten: "CLB Fitness T&V - phòng tập Gym, Yoga, Aerobic quận 1", hinh: "gym_4", diaChi: "Phòng tập thể dục - 55B Nguyễn Thị Minh Khai", gioMoCua: "Đóng cửa lúc 21:30", danhGia: 4.6, lat: 10.7837717, long: 106.6819904, soDienThoai: nil)
+            themPhongTap(id: 0, ten: "CLB Fitness T&V - phòng tập Gym, Yoga, Aerobic quận 1", hinh: "gym_4", diaChi: "Phòng tập thể dục - 55B Nguyễn Thị Minh Khai", gioMoCua: "Đóng cửa lúc 21:30", danhGia: 4.6, lat: 10.776816, long: 106.685388, soDienThoai: "0337 241 286")
         }
     }
     

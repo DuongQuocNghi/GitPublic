@@ -15,4 +15,5 @@ class PhongTapViewCell: UICollectionViewCell {
     @IBOutlet weak var DiaChi: UILabel!
     @IBOutlet weak var ThoiGia: UILabel!
     @IBOutlet weak var Hinh: UIImageView!
+    @IBOutlet weak var StartDanhGia: UILabel!
 }

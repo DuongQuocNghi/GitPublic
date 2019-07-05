@@ -24,9 +24,11 @@
 		84A4A7CB22CA4BA5003B9F11 /* NhomCoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4A7CA22CA4BA5003B9F11 /* NhomCoModel.swift */; };
 		84D61CA022CA2F7800DA082A /* JEFITData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D61C9E22CA2F7800DA082A /* JEFITData.xcdatamodeld */; };
 		84D61CA822CA317900DA082A /* NhomCoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D61CA722CA317900DA082A /* NhomCoUtils.swift */; };
+		8B7943B3557BA881FB1603CA /* libPods-AppJEFIT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA69144CF10E8287B96E8698 /* libPods-AppJEFIT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050F7049ADFDFA89E964600E /* Pods-AppJEFIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJEFIT.release.xcconfig"; path = "Target Support Files/Pods-AppJEFIT/Pods-AppJEFIT.release.xcconfig"; sourceTree = "<group>"; };
 		8408C67622CCD8980003D57D /* NhomCoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoViewCell.swift; sourceTree = "<group>"; };
 		8408C67822CCE3530003D57D /* PhongTap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhongTap+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8408C67922CCE3530003D57D /* PhongTap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhongTap+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		84A4A7CA22CA4BA5003B9F11 /* NhomCoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoModel.swift; sourceTree = "<group>"; };
 		84D61C9F22CA2F7800DA082A /* JEFITData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JEFITData.xcdatamodel; sourceTree = "<group>"; };
 		84D61CA722CA317900DA082A /* NhomCoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoUtils.swift; sourceTree = "<group>"; };
+		CF167C1E61A74F9C8FF271A7 /* Pods-AppJEFIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppJEFIT.debug.xcconfig"; path = "Target Support Files/Pods-AppJEFIT/Pods-AppJEFIT.debug.xcconfig"; sourceTree = "<group>"; };
+		DA69144CF10E8287B96E8698 /* libPods-AppJEFIT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppJEFIT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A4A7C522CA4040003B9F11 /* CoreData.framework in Frameworks */,
+				8B7943B3557BA881FB1603CA /* libPods-AppJEFIT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,7 @@
 				843CFC4122C65225008047B2 /* AppJEFIT */,
 				843CFC4022C65225008047B2 /* Products */,
 				84A4A7C322CA403F003B9F11 /* Frameworks */,
+				8D0A3FC3B335160EAC961F31 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				84A4A7C422CA403F003B9F11 /* CoreData.framework */,
+				DA69144CF10E8287B96E8698 /* libPods-AppJEFIT.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +172,16 @@
 			path = Db;
 			sourceTree = "<group>";
 		};
+		8D0A3FC3B335160EAC961F31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF167C1E61A74F9C8FF271A7 /* Pods-AppJEFIT.debug.xcconfig */,
+				050F7049ADFDFA89E964600E /* Pods-AppJEFIT.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843CFC5122C65226008047B2 /* Build configuration list for PBXNativeTarget "AppJEFIT" */;
 			buildPhases = (
+				5995E6CF90B947F3F89A5ED2 /* [CP] Check Pods Manifest.lock */,
 				843CFC3B22C65225008047B2 /* Sources */,
 				843CFC3C22C65225008047B2 /* Frameworks */,
 				843CFC3D22C65225008047B2 /* Resources */,
+				92F1D4FC6FEE61A303C70051 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +249,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5995E6CF90B947F3F89A5ED2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppJEFIT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92F1D4FC6FEE61A303C70051 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJEFIT/Pods-AppJEFIT-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppJEFIT/Pods-AppJEFIT-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppJEFIT/Pods-AppJEFIT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		843CFC3B22C65225008047B2 /* Sources */ = {
@@ -392,6 +453,7 @@
 		};
 		843CFC5222C65226008047B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF167C1E61A74F9C8FF271A7 /* Pods-AppJEFIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -410,6 +472,7 @@
 		};
 		843CFC5322C65226008047B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 050F7049ADFDFA89E964600E /* Pods-AppJEFIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

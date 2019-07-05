@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,12 +24,14 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
         cell.DanhGia.text = String((x?.danhGia)!)
         cell.DiaChi.text = x?.diaChi
         cell.ThoiGia.text = x?.gioMoCua
+        cell.StartDanhGia.text =  "★★★★☆"
         
         return cell
     }
     
     var phongTapUtils : PhongTapUtils?
     var phongTapList : [PhongTap]?
+    var mapView : GMSMapView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,21 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
         phongTapUtils = PhongTapUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
         
         phongTapList = phongTapUtils?.getAll()
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 10.777275, longitude: 106.686334, zoom: 16.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+
+        addMarkerListPhongTap()
     }
     
+    func addMarkerListPhongTap() {
+        phongTapList?.forEach({ x in
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: x.lat, longitude: x.long)
+            marker.title = x.ten
+            marker.snippet = x.soDienThoai
+            marker.map = mapView
+        })
+    }
 }
