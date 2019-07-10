@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , CLLocationManagerDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return phongTapList!.count
     }
@@ -32,18 +32,13 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
     var phongTapUtils : PhongTapUtils?
     var phongTapList : [PhongTap]?
     var mapView : GMSMapView?
+    var locationManager : CLLocationManager?
+    var currentLocation : CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        phongTapUtils = PhongTapUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
-        
-        phongTapList = phongTapUtils?.getAll()
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 10.777275, longitude: 106.686334, zoom: 16.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-
+        initMap()
         addMarkerListPhongTap()
     }
     
@@ -56,4 +51,53 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
             marker.map = mapView
         })
     }
+    
+    func initMap(){
+        phongTapUtils = PhongTapUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
+        
+        phongTapList = phongTapUtils?.getAll()
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 10.773040, longitude: 106.689248, zoom: 16.0)
+        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
+        mapView?.settings.myLocationButton = true;
+//        mapView?.isMyLocationEnabled = true;
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        
+        locationManager?.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations.last
+        
+        let location : CLLocation? = locations.last
+
+        print(location)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location?.coordinate.latitude ?? 0, longitude: location?.coordinate.longitude ?? 0, zoom: 16)
+        
+        mapView?.animate(to: camera)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            locationManager?.requestWhenInUseAuthorization()
+            break;
+        case .authorizedWhenInUse:
+            print("Permission OK")
+            break;
+        default:
+            print("Permission Error \(status)")
+            break;
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
 }
