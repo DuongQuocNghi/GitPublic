@@ -29,14 +29,18 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
     
+    @IBOutlet weak var mapView: GMSMapView!
     var phongTapUtils : PhongTapUtils?
     var phongTapList : [PhongTap]?
-    var mapView : GMSMapView?
     var locationManager : CLLocationManager?
     var currentLocation : CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        phongTapUtils = PhongTapUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
+        
+        phongTapList = phongTapUtils?.getAll()
         
         initMap()
         addMarkerListPhongTap()
@@ -45,6 +49,7 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
     func addMarkerListPhongTap() {
         phongTapList?.forEach({ x in
             let marker = GMSMarker()
+            marker.icon = phongTapUtils?.xeoLoai(diem: x.danhGia)
             marker.position = CLLocationCoordinate2D(latitude: x.lat, longitude: x.long)
             marker.title = x.ten
             marker.snippet = x.soDienThoai
@@ -53,13 +58,8 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func initMap(){
-        phongTapUtils = PhongTapUtils(context: (UIApplication.shared.delegate as! AppDelegate).persistentContraner.viewContext)
-        
-        phongTapList = phongTapUtils?.getAll()
-        
-        let camera = GMSCameraPosition.camera(withLatitude: 10.773040, longitude: 106.689248, zoom: 16.0)
-        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+//        let camera = GMSCameraPosition.camera(withLatitude: 10.773040, longitude: 106.689248, zoom: 16.0)
+//        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
         mapView?.settings.myLocationButton = true;
 //        mapView?.isMyLocationEnabled = true;
@@ -100,4 +100,9 @@ class GYMCollectionViewCell: UIViewController, UICollectionViewDelegate, UIColle
         print(error)
     }
     
+    @IBAction func mapOnClick(_ sender: Any) {
+        if mapView != nil{
+            mapView.isHidden = !mapView.isHidden
+        }
+    }
 }

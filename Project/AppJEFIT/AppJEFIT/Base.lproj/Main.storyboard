@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j6m-aY-hb4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32M-IA-rH3">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -127,26 +127,49 @@
                                     <outlet property="delegate" destination="rYk-V8-GoT" id="fjH-jD-FtH"/>
                                 </connections>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krf-Wq-EPY">
-                                <rect key="frame" x="325" y="44" width="50" height="50"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-JV-YTW" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="94" width="375" height="635"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYn-n2-yuc">
+                                <rect key="frame" x="325" y="44" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3RZ-Xy-cQv"/>
-                                    <constraint firstAttribute="width" constant="50" id="W95-7M-zSo"/>
+                                    <constraint firstAttribute="height" constant="40" id="RHZ-tH-WFm"/>
+                                    <constraint firstAttribute="width" constant="40" id="ZDZ-dR-o4e"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" image="ic_swap"/>
+                                <connections>
+                                    <action selector="mapOnClick:" destination="rYk-V8-GoT" eventType="touchUpInside" id="azZ-Tg-myh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phòng tập" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-D7-E55">
+                                <rect key="frame" x="148" y="54" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jYn-n2-yuc" firstAttribute="top" secondItem="KtY-PR-Nto" secondAttribute="top" id="6qx-lh-8Yb"/>
+                            <constraint firstItem="2cX-D7-E55" firstAttribute="top" secondItem="KtY-PR-Nto" secondAttribute="top" constant="10" id="6y6-22-WTM"/>
+                            <constraint firstItem="KtY-PR-Nto" firstAttribute="bottom" secondItem="B7U-JV-YTW" secondAttribute="bottom" id="GKj-0e-y9a"/>
+                            <constraint firstItem="KtY-PR-Nto" firstAttribute="trailing" secondItem="jYn-n2-yuc" secondAttribute="trailing" constant="10" id="I03-Cd-sp3"/>
                             <constraint firstItem="KtY-PR-Nto" firstAttribute="bottom" secondItem="DYV-tM-GUV" secondAttribute="bottom" id="Iz1-os-z2u"/>
                             <constraint firstItem="DYV-tM-GUV" firstAttribute="leading" secondItem="KtY-PR-Nto" secondAttribute="leading" id="MT1-gE-zX3"/>
-                            <constraint firstItem="krf-Wq-EPY" firstAttribute="top" secondItem="KtY-PR-Nto" secondAttribute="top" id="VLy-bn-Mw2"/>
+                            <constraint firstItem="KtY-PR-Nto" firstAttribute="trailing" secondItem="B7U-JV-YTW" secondAttribute="trailing" id="cdC-aL-r2C"/>
                             <constraint firstItem="KtY-PR-Nto" firstAttribute="trailing" secondItem="DYV-tM-GUV" secondAttribute="trailing" id="fLQ-jY-Nmg"/>
-                            <constraint firstItem="DYV-tM-GUV" firstAttribute="top" secondItem="krf-Wq-EPY" secondAttribute="bottom" id="g0e-pw-6Y4"/>
-                            <constraint firstItem="KtY-PR-Nto" firstAttribute="trailing" secondItem="krf-Wq-EPY" secondAttribute="trailing" id="h7x-fs-gLL"/>
+                            <constraint firstItem="DYV-tM-GUV" firstAttribute="top" secondItem="jYn-n2-yuc" secondAttribute="bottom" constant="10" id="qMk-P6-7AX"/>
+                            <constraint firstItem="B7U-JV-YTW" firstAttribute="leading" secondItem="KtY-PR-Nto" secondAttribute="leading" id="sbB-MM-9va"/>
+                            <constraint firstItem="B7U-JV-YTW" firstAttribute="top" secondItem="jYn-n2-yuc" secondAttribute="bottom" constant="10" id="y7H-94-izW"/>
+                            <constraint firstItem="2cX-D7-E55" firstAttribute="centerX" secondItem="6Re-SW-DxI" secondAttribute="centerX" id="zHe-7C-4GQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KtY-PR-Nto"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="GYM" id="Zhz-HE-4p4"/>
+                    <connections>
+                        <outlet property="mapView" destination="B7U-JV-YTW" id="Fdx-BI-asw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4w-Uj-Czm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,6 +206,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yC-29-fd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767" y="785"/>
+        </scene>
+        <!--Dem Gio Tap View Controller-->
+        <scene sceneID="SVo-0o-qeE">
+            <objects>
+                <viewController id="32M-IA-rH3" customClass="DemGioTapViewController" customModule="AppJEFIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ur6-15-YZY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-oB-zwb">
+                                <rect key="frame" x="166.66666666666666" y="54" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zju-49-Lzt">
+                                <rect key="frame" x="164" y="172" width="46" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startOnClick:" destination="32M-IA-rH3" eventType="touchUpInside" id="sVh-wZ-MiZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-1F-BGC">
+                                <rect key="frame" x="172" y="250" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="End"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CfQ-oB-zwb" firstAttribute="centerX" secondItem="ur6-15-YZY" secondAttribute="centerX" id="cXX-LI-ryf"/>
+                            <constraint firstItem="CfQ-oB-zwb" firstAttribute="top" secondItem="kto-nF-Jxj" secondAttribute="top" constant="10" id="oAz-jQ-fXp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kto-nF-Jxj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qag-b0-9YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5999999999999" y="386.45320197044339"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="Pbc-yw-Esg">
@@ -285,4 +348,7 @@
             <point key="canvasLocation" x="-984" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_swap" width="96" height="96"/>
+    </resources>
 </document>
