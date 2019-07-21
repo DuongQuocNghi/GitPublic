@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BaiTap" representedClassName="BaiTap" syncable="YES" codeGenerationType="class">
+        <attribute name="hinhAnh" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maNhomCo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="moTa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="NhomCo" representedClassName="NhomCo" syncable="YES">
         <attribute name="hinh" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,8 +23,16 @@
         <attribute name="soDienThoai" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ten" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SetTime" representedClassName="SetTime" syncable="YES">
+        <attribute name="maBaiTap" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="soLan" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thoiGianNghi" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thoiGianTap" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="NhomCo" positionX="-54" positionY="-9" width="128" height="90"/>
         <element name="PhongTap" positionX="-54" positionY="18" width="128" height="180"/>
+        <element name="SetTime" positionX="-54" positionY="72" width="128" height="105"/>
+        <element name="BaiTap" positionX="-45" positionY="81" width="128" height="120"/>
     </elements>
 </model>

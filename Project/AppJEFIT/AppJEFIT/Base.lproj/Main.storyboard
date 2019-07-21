@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32M-IA-rH3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,13 +17,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="br_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Ihm-rl-Z4A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_shape" translatesAutoresizingMaskIntoConstraints="NO" id="znQ-gm-B2A">
+                                <rect key="frame" x="123.66666666666669" y="278" width="128" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ihm-rl-Z4A" secondAttribute="trailing" id="Bl2-Pc-cNY"/>
+                            <constraint firstItem="Ihm-rl-Z4A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J7l-nQ-Qrf"/>
+                            <constraint firstItem="znQ-gm-B2A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="PEU-XB-iSq"/>
+                            <constraint firstItem="Ihm-rl-Z4A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R10-LE-A2h"/>
+                            <constraint firstAttribute="bottom" secondItem="Ihm-rl-Z4A" secondAttribute="bottom" id="lMq-lM-Abs"/>
+                            <constraint firstItem="znQ-gm-B2A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oev-qu-NJl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2625" y="-159"/>
+            <point key="canvasLocation" x="-2039.2" y="330.29556650246309"/>
         </scene>
         <!--GYM-->
         <scene sceneID="Lei-hT-QNK">
@@ -207,6 +223,269 @@
             </objects>
             <point key="canvasLocation" x="1767" y="785"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hzV-sh-P4d">
+            <objects>
+                <viewController id="vlw-lV-aeO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZbX-mZ-j4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evv-sD-De2">
+                                <rect key="frame" x="0.0" y="748" width="375" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="32M-IA-rH3" kind="show" id="Tp7-cR-kcE"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-Il-hQB">
+                                <rect key="frame" x="0.0" y="44" width="375" height="699"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvK-W5-RBa" customClass="VideoView" customModule="AppJEFIT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="UQf-IJ-kLZ"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJa-KP-mFd">
+                                        <rect key="frame" x="10" y="285" width="355" height="2372.6666666666665"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Các bài tập với tạ tay tuy đơn giản nhưng có giá trị cực lớn trong việc phát triển cơ bắp một cách nhanh nhất. Vậy bạn đã biết cách tập các bài tập với tạ tay hiệu quả nhất chưa?
+
+Một thân hình khoẻ mạnh, cơ bắp cường tráng và mạnh mẽ luôn là ước mơ của các bạn nam khi tìm đến với bộ môn Gym. Chỉ cần chăm chỉ tập các bài tập với tạ tay thì bạn hoàn toàn có thể làm nên chuyện đấy ! Hãy tham khảo, áp dụng ngay cho mình các bài tập tạ tay hiệu quả nhất được Thiên Trường Sport tổng hợp và chia sẻ sau đây nhé !
+
+Xem thêm: Bài tập với ghế tập tạ.
+1. Tập cơ tay với tạ tay tư thế ngồi.
+Tập cơ tay với tạ tay tư thế ngồi
+Tập cơ tay với tạ tay tư thế ngồi
+
+Tập bắp tay với tạ tay là bài tập tạ tay cơ bản mà hầu hết các Gymer chúng ta đều áp dụng để tập luyện thường xuyên. Bài tập này có tác dụng giúp phát triển cơ tay, nhất là bắp tay rất nhanh chóng và hiệu quả. Cách thực hiện bài tập tạ tay này như sau:
+
+- Bạn trong tư thế ngồi trên ghế tập tạ với một tạ tay loại nhỏ ở tay phải, hai chân dang ra hai bên. Ðể phía sau của tay phải tựa vào phía trong của đùi phải. Bàn tay phải nắm lấy tạ (lòng bàn tay quay lên trên) và theo hướng chúc xuống dưới. Tựa tay trái trên đùi trái.
+
+- Từ từ nâng tạ lên về phía vai phải, dừng lại rồi hạ tạ xuống vị trí ban đầu. Lặp lại động tác cho đến khi đạt được số lần yêu cầu và sau đó kết thúc bài tập.
+
+2. Tập cơ tay, cơ ngực trên ghế nằm.
+Tập cơ tay, cơ ngực trên ghế nằm
+Tập cơ tay, cơ ngực trên ghế nằm
+
+Bài tập tạ tay này có tác dụng giúp bạn phát triển cơ tay, đặc biệt là cơ ngực một cách hiệu quả. Hướng dẫn cách thực hiện bài tập với tạ tay này như sau:
+
+- Tư thế: Bạn trong tư thế nằm trên một chiếc ghế dài cùng hai quả tạ đơn ở hai tay. Hai tay nắm chắc tạ để hai bên nhưng cao hơn ngực một chút.
+
+- Động tác: Nâng tạ lên cao thẳng đứng, hai tay thẳng và không để hai quả tạ chạm nhau (hít vào) và trở về tư thế 1 (thở ra). Lặp lại động tác cho tới khi kết thúc bài tập.
+
+3. Tập cơ tay, cơ ngực trên ghế nghiêng.
+Tập cơ tay, cơ ngực trên ghế nghiêng
+Tập cơ tay, cơ ngực trên ghế nghiêng
+
+Tập tạ tay trên ghế dốc lên là bài tập có tác dụng giúp phát triển cơ tay và cơ ngực một cách nhanh chóng, hiệu quả. Hướng dẫn chi tiết bài tập với tạ tay này như sau:
+
+- Tư thế: Bạn nằm trên ghế nghiêng, hai tay cầm hai quả tạ đặt hai bên vai và lòng bàn tay ngửa ra phía trước.
+
+- Động tác: Đẩy tạ lên, giữ hai tay thẳng (hít vào) và hạn chế để hai tạ chạm nhau, dừng lại một lúc sau đó hạ tạ xuống trở về tư thế 1 (thở ra). Lặp lại động tác cho tới khi kết thúc bài tập.
+
+4. Tập bắp chân với tạ tay.
+Tập cơ bắp chân với tạ tay
+Tập cơ bắp chân với tạ tay
+
+Tập bắp chân với tạ tay là bài tập tạ tay khá đơn giản, dễ áp dụng nhưng có tác dụng giúp bắp chân phát triển và săn chắc nhanh chóng. Cách thực hiện động tác tập bắp chân với tạ tay này như sau:
+
+- Chuẩn bị: 2 quả tạ tay, một ghế tập tạ và 1 bục.
+
+- Tư thế: Bạn ngồi trên ghế, đặt phần đầu của chân trên bục, hai chân khép, cầm hai tạ đơn đặt trên đùi. Lặp lại động tác cho tới khi kết thúc bài tập.
+
+- Động tác: Hạ gót chân xuống (hít vào) rồi từ từ nhón gót chân lên, trở về tư thế 1 (thở ra).
+
+5. Tập cơ đùi với tạ tay.
+Tập cơ đùi với tạ tay
+Tập cơ đùi với tạ tay
+
+Bài tập với tạ tay này có tác dụng tăng kích thước và làm săn chắc cơ đùi vô cùng hiệu quả. Hướng dẫn thực hiện bài tập tạ tay này như sau:
+
+- Tư thế: Bạn trong tư thế đứng thẳng, giữ người, vai, tay, và lưng thẳng theo một hàng và hai tay cầm chắc hai quả tạ tay.
+
+- Động tác: Ngồi xuống từ từ cho tới khi phần đùi song song với mặt sàn thì dừng lại. Vẫn giữ lưng thẳng (hít vào) và đứng lên, trở về tư thế 1 (thở ra). Lặp lại động tác cho tới khi kết thúc bài tập.
+
+6. Tập cơ lưng với tạ tay.
+Tập cơ lưng với tạ tay
+Tập cơ lưng với tạ tay
+
+Tập cơ lưng với tạ tay là bài tập tạ tay trên ghế tập tạ và có tác dụng giúp phát triển cơ lưng rất hiệu quả. Cách thực hiện bài tập này như sau:
+
+- Tư thế: Bạn nằm trên ghế dài cùng hai tạ đơn. Nằm từ phần đầu tới phần mông trên ghế.
+
+- Động tác: Hai tay cầm chắc tạ, giơ thẳng tay và giữ tạ theo hướng thẳng đứng. Sau đó hạ tạ xuống phía sau ngang với đầu, giữ thẳng tay (hít vào) và từ từ trở lại tư thế 1 (thở ra). Lặp lại động tác cho tới khi kết thúc bài tập.
+
+7. Tập cơ gân kheo và cơ mông với tạ tay.
+Tập cơ gân kheo và cơ mông với tạ tay
+Tập cơ gân kheo và cơ mông với tạ tay
+
+Bài tập tạ tay này có tác dụng giúp tập cơ gân kheo và cơ mông hiệu quả. Hướng dẫn chi tiết cách tập như sau:
+
+- Tư thế: Dùng một cặp tạ đơn để trên sàn, khoảng cách giữa hai tạ khoảng 60 cm, bạn đứng vào giữa, ngồi xuống nắm chặt hai tạ, giữ lưng thẳng, mắt nhìn ra trước.
+
+- Động tác: Đứng lên, giữ hai tay thẳng và không xoay hai quả tạ, ngồi xuống từ từ để trở về tư thế 1. Lặp lại động tác cho tới khi kết thúc bài tập.
+
+Trên đây là các bài tập với tạ tay giúp phát triển toàn thân hiệu quả nhất dành cho Gymer được chia sẻ bởi Thiên Trường Sport. Chúc bạn đạt được kết quả cao nhất với những bài tập tạ tay này !</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6U-i2-Abl">
+                                        <rect key="frame" x="10" y="130" width="355" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hướng dẫn các bài tập tạ tay tại nhà đúng cách" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-os-bfL">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="2S9-6L-tb0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwY-zv-lpF">
+                                                <rect key="frame" x="255" y="0.0" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="5g4-L7-Jhx"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="jwY-zv-lpF" firstAttribute="leading" secondItem="5cf-os-bfL" secondAttribute="trailing" id="9u1-78-s8t"/>
+                                            <constraint firstAttribute="bottom" secondItem="5cf-os-bfL" secondAttribute="bottom" id="Scg-AA-fGD"/>
+                                            <constraint firstItem="5cf-os-bfL" firstAttribute="top" secondItem="L6U-i2-Abl" secondAttribute="top" id="YWB-Bs-aXh"/>
+                                            <constraint firstAttribute="trailing" secondItem="jwY-zv-lpF" secondAttribute="trailing" id="cJt-SG-u8b"/>
+                                            <constraint firstItem="jwY-zv-lpF" firstAttribute="top" secondItem="L6U-i2-Abl" secondAttribute="top" id="eIa-aV-St1"/>
+                                            <constraint firstItem="5cf-os-bfL" firstAttribute="leading" secondItem="L6U-i2-Abl" secondAttribute="leading" id="gHg-ci-Y9o"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Uxh-qm-uvP">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="85"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-UC-o7T">
+                                                <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="85"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bodypart_chest" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-OY-AAa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="cbQ-Px-zh2"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cơ ngực" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q9-Ek-z9S">
+                                                        <rect key="frame" x="0.0" y="60" width="123.66666666666667" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="kVA-OY-AAa" firstAttribute="leading" secondItem="ceO-UC-o7T" secondAttribute="leading" id="KQG-iw-AUi"/>
+                                                    <constraint firstItem="3Q9-Ek-z9S" firstAttribute="top" secondItem="kVA-OY-AAa" secondAttribute="bottom" id="Ohl-Aq-uAT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kVA-OY-AAa" secondAttribute="trailing" id="PZl-He-c0U"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3Q9-Ek-z9S" secondAttribute="trailing" id="Tab-vG-7Js"/>
+                                                    <constraint firstItem="kVA-OY-AAa" firstAttribute="top" secondItem="ceO-UC-o7T" secondAttribute="top" id="VbU-gm-i1i"/>
+                                                    <constraint firstItem="3Q9-Ek-z9S" firstAttribute="leading" secondItem="ceO-UC-o7T" secondAttribute="leading" id="qV4-J7-Ssb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3Q9-Ek-z9S" secondAttribute="bottom" id="qi9-Yf-yQT"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJ4-9h-2P0">
+                                                <rect key="frame" x="125.66666666666666" y="0.0" width="123.66666666666666" height="85"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5e-8I-iqh">
+                                                        <rect key="frame" x="0.0" y="60" width="123.66666666666667" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_equipment_barbell" translatesAutoresizingMaskIntoConstraints="NO" id="lFA-Sr-MM8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="60"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="f5e-8I-iqh" secondAttribute="bottom" id="11i-7r-gUC"/>
+                                                    <constraint firstItem="f5e-8I-iqh" firstAttribute="leading" secondItem="DJ4-9h-2P0" secondAttribute="leading" id="4Ms-5K-9XO"/>
+                                                    <constraint firstItem="f5e-8I-iqh" firstAttribute="top" secondItem="lFA-Sr-MM8" secondAttribute="bottom" id="5bP-Hn-cxl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f5e-8I-iqh" secondAttribute="trailing" id="9tD-BH-nXq"/>
+                                                    <constraint firstItem="lFA-Sr-MM8" firstAttribute="leading" secondItem="DJ4-9h-2P0" secondAttribute="leading" id="QMo-0r-Qbu"/>
+                                                    <constraint firstItem="lFA-Sr-MM8" firstAttribute="top" secondItem="DJ4-9h-2P0" secondAttribute="top" id="gU4-km-oJL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lFA-Sr-MM8" secondAttribute="trailing" id="zhw-xq-Czi"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4B-bE-u78">
+                                                <rect key="frame" x="251.33333333333334" y="0.0" width="123.66666666666666" height="85"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bodypart_triceps" translatesAutoresizingMaskIntoConstraints="NO" id="IkC-Wv-GiK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.66666666666667" height="60"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cơ tay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVC-6b-vH9">
+                                                        <rect key="frame" x="0.0" y="60" width="123.66666666666667" height="25"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="tVC-6b-vH9" secondAttribute="trailing" id="2ZE-B2-iSu"/>
+                                                    <constraint firstItem="tVC-6b-vH9" firstAttribute="top" secondItem="IkC-Wv-GiK" secondAttribute="bottom" id="HgX-J6-a5I"/>
+                                                    <constraint firstItem="IkC-Wv-GiK" firstAttribute="leading" secondItem="V4B-bE-u78" secondAttribute="leading" id="Kam-cD-BTa"/>
+                                                    <constraint firstItem="tVC-6b-vH9" firstAttribute="top" secondItem="IkC-Wv-GiK" secondAttribute="bottom" id="SfK-28-B6l"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tVC-6b-vH9" secondAttribute="bottom" id="hU3-vu-kkN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IkC-Wv-GiK" secondAttribute="trailing" id="icX-RK-zwz"/>
+                                                    <constraint firstItem="tVC-6b-vH9" firstAttribute="leading" secondItem="V4B-bE-u78" secondAttribute="leading" id="qZq-Ja-lj3"/>
+                                                    <constraint firstItem="IkC-Wv-GiK" firstAttribute="top" secondItem="V4B-bE-u78" secondAttribute="top" id="rxw-6K-dSl"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="PS2-pV-BzG"/>
+                                            <constraint firstItem="lFA-Sr-MM8" firstAttribute="height" secondItem="kVA-OY-AAa" secondAttribute="height" id="Yot-5N-su1"/>
+                                            <constraint firstItem="IkC-Wv-GiK" firstAttribute="height" secondItem="kVA-OY-AAa" secondAttribute="height" id="afM-Xd-9N3"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="L6U-i2-Abl" firstAttribute="leading" secondItem="WXf-Il-hQB" secondAttribute="leading" constant="10" id="5Uc-z0-TZu"/>
+                                    <constraint firstItem="JJa-KP-mFd" firstAttribute="leading" secondItem="WXf-Il-hQB" secondAttribute="leading" constant="10" id="AHg-8S-zqa"/>
+                                    <constraint firstItem="JJa-KP-mFd" firstAttribute="top" secondItem="Uxh-qm-uvP" secondAttribute="bottom" constant="10" id="Dyq-fR-Hyi"/>
+                                    <constraint firstAttribute="trailing" secondItem="RvK-W5-RBa" secondAttribute="trailing" id="Ime-14-Ke2"/>
+                                    <constraint firstAttribute="trailing" secondItem="JJa-KP-mFd" secondAttribute="trailing" constant="10" id="L8i-W4-Xbc"/>
+                                    <constraint firstItem="RvK-W5-RBa" firstAttribute="centerX" secondItem="WXf-Il-hQB" secondAttribute="centerX" id="Px2-8U-S8u"/>
+                                    <constraint firstItem="RvK-W5-RBa" firstAttribute="top" secondItem="WXf-Il-hQB" secondAttribute="top" id="YP7-Sb-8Fa"/>
+                                    <constraint firstItem="RvK-W5-RBa" firstAttribute="leading" secondItem="WXf-Il-hQB" secondAttribute="leading" id="ZXh-jq-Gjk"/>
+                                    <constraint firstAttribute="trailing" secondItem="L6U-i2-Abl" secondAttribute="trailing" constant="10" id="aLy-tS-4Mg"/>
+                                    <constraint firstItem="L6U-i2-Abl" firstAttribute="top" secondItem="RvK-W5-RBa" secondAttribute="bottom" id="ffD-8D-PYu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uxh-qm-uvP" secondAttribute="trailing" id="oQV-R6-kVt"/>
+                                    <constraint firstItem="Uxh-qm-uvP" firstAttribute="top" secondItem="L6U-i2-Abl" secondAttribute="bottom" id="tDZ-0j-CfW"/>
+                                    <constraint firstAttribute="bottom" secondItem="JJa-KP-mFd" secondAttribute="bottom" id="tdr-m4-H1l"/>
+                                    <constraint firstItem="Uxh-qm-uvP" firstAttribute="leading" secondItem="WXf-Il-hQB" secondAttribute="leading" id="ytE-gC-0I7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pZs-k4-2Ly" firstAttribute="bottom" secondItem="Evv-sD-De2" secondAttribute="bottom" id="BBj-zq-Xro"/>
+                            <constraint firstItem="Evv-sD-De2" firstAttribute="leading" secondItem="pZs-k4-2Ly" secondAttribute="leading" id="GQQ-lJ-pQh"/>
+                            <constraint firstItem="WXf-Il-hQB" firstAttribute="trailing" secondItem="pZs-k4-2Ly" secondAttribute="trailing" id="O5r-MR-JYK"/>
+                            <constraint firstItem="WXf-Il-hQB" firstAttribute="top" secondItem="pZs-k4-2Ly" secondAttribute="top" id="OkV-2p-TwQ"/>
+                            <constraint firstItem="Evv-sD-De2" firstAttribute="top" secondItem="WXf-Il-hQB" secondAttribute="bottom" constant="5" id="RPH-aM-hqI"/>
+                            <constraint firstItem="WXf-Il-hQB" firstAttribute="leading" secondItem="pZs-k4-2Ly" secondAttribute="leading" id="Ukt-71-cvl"/>
+                            <constraint firstItem="pZs-k4-2Ly" firstAttribute="trailing" secondItem="Evv-sD-De2" secondAttribute="trailing" id="rUA-AB-ZnD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pZs-k4-2Ly"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5g3-WO-rrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784.8000000000002" y="345.81280788177344"/>
+        </scene>
         <!--Dem Gio Tap View Controller-->
         <scene sceneID="SVo-0o-qeE">
             <objects>
@@ -215,14 +494,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-oB-zwb">
-                                <rect key="frame" x="166.66666666666666" y="54" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zju-49-Lzt">
-                                <rect key="frame" x="164" y="172" width="46" height="36"/>
+                                <rect key="frame" x="164" y="349" width="46" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -230,22 +503,37 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-1F-BGC">
-                                <rect key="frame" x="172" y="250" width="30" height="30"/>
+                                <rect key="frame" x="172" y="436" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endOnClick:" destination="32M-IA-rH3" eventType="touchUpInside" id="3SZ-0z-HbM"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-oB-zwb">
+                                <rect key="frame" x="0.0" y="164" width="375" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CfQ-oB-zwb" firstAttribute="leading" secondItem="kto-nF-Jxj" secondAttribute="leading" id="3NN-2F-Qaz"/>
                             <constraint firstItem="CfQ-oB-zwb" firstAttribute="centerX" secondItem="ur6-15-YZY" secondAttribute="centerX" id="cXX-LI-ryf"/>
-                            <constraint firstItem="CfQ-oB-zwb" firstAttribute="top" secondItem="kto-nF-Jxj" secondAttribute="top" constant="10" id="oAz-jQ-fXp"/>
+                            <constraint firstItem="CfQ-oB-zwb" firstAttribute="top" secondItem="kto-nF-Jxj" secondAttribute="top" constant="120" id="oAz-jQ-fXp"/>
+                            <constraint firstItem="kto-nF-Jxj" firstAttribute="trailing" secondItem="CfQ-oB-zwb" secondAttribute="trailing" id="obH-ye-OnE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kto-nF-Jxj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sjx-hv-8Xw"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="CfQ-oB-zwb" id="m0u-R2-QLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qag-b0-9YU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3133.5999999999999" y="386.45320197044339"/>
+            <point key="canvasLocation" x="3894" y="346"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="Pbc-yw-Esg">
@@ -349,6 +637,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="br_splash" width="2" height="1333"/>
+        <image name="ic_bodypart_chest" width="240" height="240"/>
+        <image name="ic_bodypart_triceps" width="240" height="240"/>
+        <image name="ic_equipment_barbell" width="240" height="240"/>
         <image name="ic_swap" width="96" height="96"/>
+        <image name="logo_shape" width="128" height="128"/>
     </resources>
 </document>
