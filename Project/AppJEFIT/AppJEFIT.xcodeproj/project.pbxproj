@@ -23,6 +23,7 @@
 		84A4A7C922CA4204003B9F11 /* NhomCo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4A7C722CA4204003B9F11 /* NhomCo+CoreDataProperties.swift */; };
 		84A4A7CB22CA4BA5003B9F11 /* NhomCoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4A7CA22CA4BA5003B9F11 /* NhomCoModel.swift */; };
 		84A656E122DCBEFC008E4D21 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A656E022DCBEFC008E4D21 /* VideoView.swift */; };
+		84C064C322E5DF670029A0C4 /* ChiTietBaiTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C064C222E5DF670029A0C4 /* ChiTietBaiTapViewController.swift */; };
 		84D61CA022CA2F7800DA082A /* JEFITData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D61C9E22CA2F7800DA082A /* JEFITData.xcdatamodeld */; };
 		84D61CA822CA317900DA082A /* NhomCoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D61CA722CA317900DA082A /* NhomCoUtils.swift */; };
 		84E07B1322D62AC1006D6D95 /* DemGioTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E07B1222D62AC1006D6D95 /* DemGioTapViewController.swift */; };
@@ -57,6 +58,7 @@
 		84A4A7C722CA4204003B9F11 /* NhomCo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NhomCo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84A4A7CA22CA4BA5003B9F11 /* NhomCoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoModel.swift; sourceTree = "<group>"; };
 		84A656E022DCBEFC008E4D21 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		84C064C222E5DF670029A0C4 /* ChiTietBaiTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietBaiTapViewController.swift; sourceTree = "<group>"; };
 		84D61C9F22CA2F7800DA082A /* JEFITData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JEFITData.xcdatamodel; sourceTree = "<group>"; };
 		84D61CA722CA317900DA082A /* NhomCoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhomCoUtils.swift; sourceTree = "<group>"; };
 		84E07B1222D62AC1006D6D95 /* DemGioTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemGioTapViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				843CFC5722C65B1A008047B2 /* ExercisesViewController.swift */,
 				8408C68022CCE8AD0003D57D /* GYMCollectionViewCell.swift */,
 				84E07B1222D62AC1006D6D95 /* DemGioTapViewController.swift */,
+				84C064C222E5DF670029A0C4 /* ChiTietBaiTapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				8408C68322CCEA480003D57D /* PhongTapViewCell.swift in Sources */,
 				84FC764F22D8BD8200ED6C41 /* ExtensionNSManagedObject.swift in Sources */,
+				84C064C322E5DF670029A0C4 /* ChiTietBaiTapViewController.swift in Sources */,
 				8408C67B22CCE3530003D57D /* PhongTap+CoreDataProperties.swift in Sources */,
 				84FC764B22D8BACA00ED6C41 /* SetTime+CoreDataProperties.swift in Sources */,
 				84A4A7C822CA4204003B9F11 /* NhomCo+CoreDataClass.swift in Sources */,

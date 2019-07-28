@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vlw-lV-aeO">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1767" y="785"/>
         </scene>
-        <!--View Controller-->
+        <!--Chi Tiet Bai Tap View Controller-->
         <scene sceneID="hzV-sh-P4d">
             <objects>
-                <viewController id="vlw-lV-aeO" sceneMemberID="viewController">
+                <viewController id="vlw-lV-aeO" customClass="ChiTietBaiTapViewController" customModule="AppJEFIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZbX-mZ-j4b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -481,6 +481,9 @@ Trên đây là các bài tập với tạ tay giúp phát triển toàn thân h
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZs-k4-2Ly"/>
                     </view>
+                    <connections>
+                        <outlet property="videoView" destination="RvK-W5-RBa" id="mpT-9c-GzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g3-WO-rrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,8 +16,8 @@ class VideoView : UIView {
     var videoURL : String?
     
     func setURL(url : String) {
-//        videoURL = "http://www.youtube.com/embed/uKQ8IBVJjKc?autoplay=1"
-        
+        // Direct link can play
+        // https://dl.dropboxusercontent.com/s/l65jm79el20vqnh/mv.mp4
         if let videoURL = URL(string: url){
             avPlayer = AVPlayer(url: videoURL)
             videoPlayer = AVPlayerLayer(player: avPlayer)
