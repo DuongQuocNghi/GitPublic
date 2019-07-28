@@ -15,7 +15,7 @@ class AuthenticationBloc
         _userRepository = userRepository;
 
   @override
-  AuthenticationState get initialState => null;
+  AuthenticationState get initialState => Uninitialized();
 
   @override
   Stream<AuthenticationState> mapEventToState(
