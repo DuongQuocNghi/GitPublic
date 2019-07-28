@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:flutter_firebase_login/Screen/register/bloc/register_event.dart';
-import 'package:flutter_firebase_login/Screen/register/bloc/register_state.dart';
+import 'package:flutter_firebase_login/screen/register/bloc/register_event.dart';
+import 'package:flutter_firebase_login/screen/register/bloc/register_state.dart';
 import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 

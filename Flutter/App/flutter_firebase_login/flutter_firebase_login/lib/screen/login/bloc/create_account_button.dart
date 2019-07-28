@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_login/Screen/register/register_screen.dart';
+import 'package:flutter_firebase_login/screen/register/register_screen.dart';
 import 'package:flutter_firebase_login/user_repository.dart';
 
 

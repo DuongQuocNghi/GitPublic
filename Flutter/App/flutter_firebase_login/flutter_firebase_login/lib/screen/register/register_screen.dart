@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_login/Screen/register/register_form.dart';
+import 'package:flutter_firebase_login/screen/register/bloc/register_bloc.dart';
+import 'package:flutter_firebase_login/screen/register/register_form.dart';
 
 import '../../user_repository.dart';
-import 'bloc/register_bloc.dart';
+
 
 
 class RegisterScreen extends StatelessWidget {
