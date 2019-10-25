@@ -8,30 +8,41 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new MyHomePage(),
+    return MaterialApp(
+      home: new Scaffold(
+          body: new Center(
+            child: new TimerWidget(),
+          )),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
+class TimerWidget extends StatefulWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  TimerWidgetState createState() {
+    return new TimerWidgetState();
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class TimerWidgetState extends State<TimerWidget> {
   int _startTime = new DateTime.now().millisecondsSinceEpoch;
   int _numMilliseconds = 0;
   int _numSeconds = 0;
   int _numMinutes = 0;
 
   @override
+  Widget build(BuildContext context) {
+    return new Text(
+      sprintf("%02d:%02d:%2d", [_numMinutes, _numSeconds, _numMilliseconds]),
+    );
+  }
+
+  @override
   void initState() {
     super.initState();
     Timer.periodic(new Duration(milliseconds: 10), (Timer timer) {
-      int timeDifference = new DateTime.now().millisecondsSinceEpoch - _startTime;
+      int timeDifference =
+          new DateTime.now().millisecondsSinceEpoch - _startTime;
       double seconds = timeDifference / 1000;
       double minutes = seconds / 60;
       double leftoverSeconds = seconds % 60;
@@ -42,16 +53,5 @@ class _MyHomePageState extends State<MyHomePage> {
         _numMinutes = minutes.floor();
       });
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-        body: new Center(
-          child: new Text(
-            sprintf("%02d:%02d:%2d", [_numMinutes, _numSeconds, _numMilliseconds]),
-          ),
-        )
-    );
   }
 }
