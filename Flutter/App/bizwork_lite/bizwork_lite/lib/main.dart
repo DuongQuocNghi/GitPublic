@@ -1,111 +1,180 @@
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+import 'Widget/PasswordField.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(new FocusNode());
+      },
+      child: MaterialApp(home: LoginPage()),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
+class LoginPage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class UserLoginData {
+  String userName = '';
+  String password = '';
+}
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+class _LoginPageState extends State<LoginPage> {
+  UserLoginData userLogin = UserLoginData();
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: SafeArea(
+        child: ListView(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            const SizedBox(height: 300.0),
+            TextFormField(
+              textCapitalization: TextCapitalization.words,
+              decoration: const InputDecoration(
+                border: UnderlineInputBorder(),
+                filled: false,
+                labelText: 'Tên đăng nhập',
+              ),
+              onSaved: (String value) {
+                userLogin.userName = value;
+              },
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            const SizedBox(height: 12.0),
+            PasswordField(
+              fieldKey: GlobalKey<FormFieldState<String>>(),
+              labelText: 'Mật khẩu',
+              onFieldSubmitted: (String value) {
+                setState(() {
+                  userLogin.password = value;
+                });
+              },
+            ),
+            const SizedBox(height: 30.0),
+            Center(
+              child: RaisedButton(
+                onPressed: () {
+                  var apiCallBack = LoginAPI();
+
+                  apiCallBack.then((value) {
+                    print(value);
+                  },
+                      onError: (e) {
+                        print(e);
+                      });
+                },
+                clipBehavior: Clip.antiAlias,
+                padding: const EdgeInsets.all(0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(25.0),
+                ),
+                child: Container(
+                  width: 200.0,
+                  height: 50.0,
+                  decoration: new BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: <Color>[
+                        Color(0xFF3EBFEA),
+                        Color(0xFF047DC1),
+                      ],
+                    ),
+                  ),
+                  child: new Center(
+                    child: new Text(
+                      'Đăng nhập',
+                      style: new TextStyle(fontSize: 18.0, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  Future<LoginResquestDto> LoginAPI() async {
+    var url = 'http://125.212.252.106:1003/BizServiceWS.svc/api/login';
+    var header = {'Content-Type': 'application/json'};
+    var body = {'UserName': 'BIZ00017', 'Password': '1234567'};
+
+    var response = await http.post(url, headers: header, body: body);
+    print('Resquest header: ${response.headers}');
+    print('Resquest body: ${response.body}');
+    print('Response status: ${response.statusCode}');
+    print('Response body: ${response.body}');
+
+    return compute(parseLoginResquestDto, response.body);
+  }
+
+  // A function that converts a response body into a List<Photo>.
+  LoginResquestDto parseLoginResquestDto(String responseBody) {
+    final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
+
+    return parsed
+        .map<LoginResquestDto>((json) => LoginResquestDto.fromJson(json))
+        .toList();
+  }
+}
+
+class LoginResquestDto {
+  String loginSessionKey;
+  String avatar;
+  int employeeID;
+  String employeeCode;
+  String employeeType;
+  String fullName;
+  String lastName;
+  String jobType;
+  String lastActiveDate;
+  String languageCode;
+  int roleInTaskBelow;
+  int sessionType;
+  String deepLinkChatCS;
+
+  LoginResquestDto(
+      {this.loginSessionKey,
+        this.avatar,
+        this.employeeID,
+        this.employeeCode,
+        this.employeeType,
+        this.fullName,
+        this.lastName,
+        this.jobType,
+        this.lastActiveDate,
+        this.languageCode,
+        this.roleInTaskBelow,
+        this.sessionType,
+        this.deepLinkChatCS});
+
+  factory LoginResquestDto.fromJson(Map<String, dynamic> json) {
+    return LoginResquestDto(
+        loginSessionKey: json['LoginSessionKey'] as String,
+        avatar: json['Avatar'] as String,
+        employeeID: json['EmployeeID'] as int,
+        employeeCode: json['EmployeeCode'] as String,
+        employeeType: json['EmployeeType'] as String,
+        fullName: json['FullName'] as String,
+        lastName: json['LastName'] as String,
+        jobType: json['JobType'] as String,
+        lastActiveDate: json['LastActiveDate'] as String,
+        languageCode: json['LanguageCode'] as String,
+        roleInTaskBelow: json['RoleInTaskBelow'] as int,
+        sessionType: json['SessionType'] as int,
+        deepLinkChatCS: json['DeepLinkChatCS'] as String);
   }
 }
