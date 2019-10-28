@@ -23,8 +23,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class UserLoginData {
-  String userName = '';
-  String password = '';
+  String userName;
+  String password;
 }
 
 class _LoginPageState extends State<LoginPage> {
@@ -39,14 +39,16 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             const SizedBox(height: 300.0),
             TextFormField(
-              textCapitalization: TextCapitalization.words,
               decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
                 filled: false,
                 labelText: 'Tên đăng nhập',
               ),
-              onSaved: (String value) {
-                userLogin.userName = value;
+              onFieldSubmitted: (String value) {
+                setState(() {
+                  print("Tên đăng nhập" + value);
+                  userLogin.userName = value;
+                });
               },
             ),
             const SizedBox(height: 12.0),
@@ -63,11 +65,16 @@ class _LoginPageState extends State<LoginPage> {
             Center(
               child: RaisedButton(
                 onPressed: () async {
+                  try {
+                    var data = await AuthorizationService().login(
+                        LoginResquestDto(
+                            "Biz00017", "1234567"));
+//                    userLogin.userName, userLogin.password));
 
-                  var data = await AuthorizationService().login(LoginResquestDto("BIZ00017","1234567"));
-
-                  print(data.returnMessage);
-
+                    print(data.fullName);
+                  } on Exception catch (ex) {
+                    print(ex);
+                  }
                 },
                 clipBehavior: Clip.antiAlias,
                 padding: const EdgeInsets.all(0),
@@ -98,7 +105,5 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
-
   }
-
 }

@@ -7,13 +7,14 @@ import 'Dto/LoginRequestDto.dart';
 import 'Dto/LoginResponseDto.dart';
 
 class AuthorizationService {
-  Future<APIResponse> login(LoginResquestDto input) async {
+  Future<LoginResponseDto> login(LoginResquestDto input) async {
     var jsonData = await AuthorizationRemoteSource().login(input);
-
     var mapData = json.decode(jsonData);
-//    var test = LoginResponseDto.fromJson(mapTest);
-//    print(test);
-
-    return APIResponse.fromJson(mapData);
+    var apiData = APIResponse.fromJson(mapData);
+    if (apiData.data != null){
+      return LoginResponseDto.fromJson(apiData.data);
+    }else{
+      throw new Exception(apiData.returnMessage);
+    }
   }
 }

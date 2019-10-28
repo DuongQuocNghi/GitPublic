@@ -1,3 +1,4 @@
+
 class LoginResponseDto {
   String loginSessionKey;
   String avatar;
