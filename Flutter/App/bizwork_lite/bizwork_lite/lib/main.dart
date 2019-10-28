@@ -1,10 +1,6 @@
-import 'dart:async';
-import 'dart:convert';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-
+import 'Service/Authorization/AuthorizationService.dart';
+import 'Service/Authorization/Dto/LoginRequestDto.dart';
 import 'Widget/PasswordField.dart';
 
 void main() => runApp(MyApp());
@@ -66,15 +62,12 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 30.0),
             Center(
               child: RaisedButton(
-                onPressed: () {
-                  var apiCallBack = LoginAPI();
+                onPressed: () async {
 
-                  apiCallBack.then((value) {
-                    print(value);
-                  },
-                      onError: (e) {
-                        print(e);
-                      });
+                  var data = await AuthorizationService().login(LoginResquestDto("BIZ00017","1234567"));
+
+                  print(data.returnMessage);
+
                 },
                 clipBehavior: Clip.antiAlias,
                 padding: const EdgeInsets.all(0),
@@ -105,76 +98,7 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+
   }
 
-  Future<LoginResquestDto> LoginAPI() async {
-    var url = 'http://125.212.252.106:1003/BizServiceWS.svc/api/login';
-    var header = {'Content-Type': 'application/json'};
-    var body = {'UserName': 'BIZ00017', 'Password': '1234567'};
-
-    var response = await http.post(url, headers: header, body: body);
-    print('Resquest header: ${response.headers}');
-    print('Resquest body: ${response.body}');
-    print('Response status: ${response.statusCode}');
-    print('Response body: ${response.body}');
-
-    return compute(parseLoginResquestDto, response.body);
-  }
-
-  // A function that converts a response body into a List<Photo>.
-  LoginResquestDto parseLoginResquestDto(String responseBody) {
-    final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
-
-    return parsed
-        .map<LoginResquestDto>((json) => LoginResquestDto.fromJson(json))
-        .toList();
-  }
-}
-
-class LoginResquestDto {
-  String loginSessionKey;
-  String avatar;
-  int employeeID;
-  String employeeCode;
-  String employeeType;
-  String fullName;
-  String lastName;
-  String jobType;
-  String lastActiveDate;
-  String languageCode;
-  int roleInTaskBelow;
-  int sessionType;
-  String deepLinkChatCS;
-
-  LoginResquestDto(
-      {this.loginSessionKey,
-        this.avatar,
-        this.employeeID,
-        this.employeeCode,
-        this.employeeType,
-        this.fullName,
-        this.lastName,
-        this.jobType,
-        this.lastActiveDate,
-        this.languageCode,
-        this.roleInTaskBelow,
-        this.sessionType,
-        this.deepLinkChatCS});
-
-  factory LoginResquestDto.fromJson(Map<String, dynamic> json) {
-    return LoginResquestDto(
-        loginSessionKey: json['LoginSessionKey'] as String,
-        avatar: json['Avatar'] as String,
-        employeeID: json['EmployeeID'] as int,
-        employeeCode: json['EmployeeCode'] as String,
-        employeeType: json['EmployeeType'] as String,
-        fullName: json['FullName'] as String,
-        lastName: json['LastName'] as String,
-        jobType: json['JobType'] as String,
-        lastActiveDate: json['LastActiveDate'] as String,
-        languageCode: json['LanguageCode'] as String,
-        roleInTaskBelow: json['RoleInTaskBelow'] as int,
-        sessionType: json['SessionType'] as int,
-        deepLinkChatCS: json['DeepLinkChatCS'] as String);
-  }
 }
