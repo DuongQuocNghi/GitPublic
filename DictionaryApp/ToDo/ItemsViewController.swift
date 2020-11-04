@@ -115,6 +115,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             searching = true
             self.itemsSearch = Array(realm.objects(Item.self).filter({ item -> Bool in
                 item.tiengViet.lowercased().contains(text.lowercased()) ||
+                item.phatAm.contains(text.lowercased()) ||
                 item.tiengViet.folded.lowercased().contains(text.lowercased()) ||
                 item.hiragana.contains(text) ||
                 item.katakana.contains(text) ||
