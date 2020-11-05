@@ -27,6 +27,7 @@ class Item: Object {
     @objc dynamic var katakana: String = ""
     @objc dynamic var kanji: String = ""
     @objc dynamic var phatAm: String = ""
+    @objc dynamic var like: Bool = false
     @objc dynamic var timestamp: Date = Date()
     
     override static func primaryKey() -> String? {

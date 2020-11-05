@@ -261,7 +261,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             text += " - \(item.kanji)"
         }
         if (!item.phatAm.isEmpty){
-            text += " 👉 \(item.phatAm)"
+            text += " \(item.like ? "👍" : "👉" ) \(item.phatAm)"
         }
         
         cell.lengthyLabel.text = text
@@ -285,8 +285,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.search(text: self.textSearch.text ?? "")
         }
     }
-
-
+    
 }
 
 class MyCellItem: UITableViewCell {
@@ -317,6 +316,7 @@ class MyCellItem: UITableViewCell {
             lengthyLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
+    
 }
 
 public extension UITextField
