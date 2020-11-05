@@ -22,6 +22,7 @@ class Item: Object {
     
     @objc dynamic var itemId: String = UUID().uuidString
     @objc dynamic var tiengViet: String = ""
+    @objc dynamic var english: String = ""
     @objc dynamic var hiragana: String = ""
     @objc dynamic var katakana: String = ""
     @objc dynamic var kanji: String = ""

@@ -51,6 +51,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let dateStarRealm = formatter.date(from: "2020/11/03")!
         let day = 30 - Int((Date().timeIntervalSince1970 - dateStarRealm.timeIntervalSince1970) / 60 / 1440)
         title = "Things ToDo! \(day) ngày"
+        self.navigationController?.navigationBar.barTintColor = UIColor.orange
+        
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
+        self.navigationController?.navigationBar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedNavigationBar(tapGestureRecognizer:))))
         
         textSearch.delegate = self
         textSearch.borderStyle = .roundedRect
@@ -77,6 +81,17 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(rightBarButtonDidClick))
         
         notificationToken = items.observe { [weak self] (changes) in
+            let countHiragana = self?.items.filter({ (item) -> Bool in
+                !item.hiragana.isEmpty
+            }).count ?? 0
+            let countKatakana = self?.items.filter({ (item) -> Bool in
+                !item.katakana.isEmpty
+            }).count ?? 0
+            let countKanji = self?.items.filter({ (item) -> Bool in
+                !item.kanji.isEmpty
+            }).count ?? 0
+            self?.textSearch.placeholder = "Tìm kiếm: ひらがな(\(countHiragana))  カタカナ(\(countKatakana))  漢字(\(countKanji))"
+
             if (!self!.searching) {
                 guard let tableView = self?.tableView else { return }
                 switch changes {
@@ -101,6 +116,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    @objc func tappedNavigationBar(tapGestureRecognizer: UITapGestureRecognizer) {
+        self.navigationController!.pushViewController(DrawViewController(), animated: true);
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -117,6 +136,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 item.tiengViet.lowercased().contains(text.lowercased()) ||
                 item.phatAm.contains(text.lowercased()) ||
                 item.tiengViet.folded.lowercased().contains(text.lowercased()) ||
+                item.english.lowercased().contains(text.lowercased()) ||
                 item.hiragana.contains(text) ||
                 item.katakana.contains(text) ||
                 item.kanji.contains(text)
@@ -144,15 +164,17 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             alert -> Void in
             
             let textFieldVietNam = alertController.textFields![0] as UITextField
-            let textFieldHiragana = alertController.textFields![1] as UITextField
-            let textFieldKatakana = alertController.textFields![2] as UITextField
-            let textFieldKanji = alertController.textFields![3] as UITextField
-            let textFieldPhatAm = alertController.textFields![4] as UITextField
+            let textFieldEnglish = alertController.textFields![1] as UITextField
+            let textFieldHiragana = alertController.textFields![2] as UITextField
+            let textFieldKatakana = alertController.textFields![3] as UITextField
+            let textFieldKanji = alertController.textFields![4] as UITextField
+            let textFieldPhatAm = alertController.textFields![5] as UITextField
 
             
             try! self.realm.write {
 
                 item.tiengViet = textFieldVietNam.text ?? ""
+                item.english = textFieldEnglish.text ?? ""
                 item.hiragana = textFieldHiragana.text ?? ""
                 item.katakana = textFieldKatakana.text ?? ""
                 item.kanji = textFieldKanji.text ?? ""
@@ -171,6 +193,11 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             textField.borderStyle = .roundedRect
             textField.placeholder = "Tiếng Việt"
             textField.text = item.tiengViet
+        })
+        alertController.addTextField(configurationHandler: {(textField : UITextField!) -> Void in
+            textField.borderStyle = .roundedRect
+            textField.placeholder = "English"
+            textField.text = item.english
         })
         alertController.addTextField(configurationHandler: {(textField : UITextField!) -> Void in
             textField.borderStyle = .roundedRect
@@ -221,6 +248,9 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if (!item.tiengViet.isEmpty){
             text += " - \(item.tiengViet)"
         }
+        if (!item.english.isEmpty){
+            text += " - \(item.english)"
+        }
         if (!item.hiragana.isEmpty){
             text += " - \(item.hiragana)"
         }
@@ -249,6 +279,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let item = searching ? itemsSearch[indexPath.row] : items[indexPath.row]
         try! realm.write {
             realm.delete(item)
+        }
+
+        if (self.searching){
+            self.search(text: self.textSearch.text ?? "")
         }
     }
 
@@ -289,9 +323,12 @@ public extension UITextField
 {
     override var textInputMode: UITextInputMode?
     {
-        if (self.placeholder == "Hiragana" || self.placeholder == "Katakana" || self.placeholder == "Kanji"){
+        switch self.placeholder {
+        case "Hiragana", "Kanji", "Katakana":
             return UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == "ja-JP" }) ?? super.textInputMode
-        }else{
+        case "English":
+            return UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == "en-US" }) ?? super.textInputMode
+        default:
             return UITextInputMode.activeInputModes.first(where: { $0.primaryLanguage == "vi-VN" }) ?? super.textInputMode
         }
     }
