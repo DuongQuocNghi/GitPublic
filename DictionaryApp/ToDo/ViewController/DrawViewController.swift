@@ -57,8 +57,37 @@ class DrawViewController: UIViewController {
             UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharePressed)),
             UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(resetPressed))
         ]
+        
+        setupGridlines()
     }
     
+    func setupGridlines() {
+        let height = view.frame.height
+        let width = view.frame.width
+        
+        let column = 10
+        for i in 1...column{
+            let a = UIView()
+            a.backgroundColor = UIColor.black
+            view.addSubview(a)
+            a.frame = CGRect(x: width / CGFloat(column) * CGFloat(i),
+                             y: 0,
+                             width: 1,
+                             height: height)
+        }
+        
+        
+        let row = 20
+        for i in 1...row{
+            let a = UIView()
+            a.backgroundColor = UIColor.black
+            view.addSubview(a)
+            a.frame = CGRect(x: 0,
+                             y: height / CGFloat(row) * CGFloat(i),
+                             width: width,
+                             height: 1)
+        }
+    }
   
   // MARK: - Actions
   

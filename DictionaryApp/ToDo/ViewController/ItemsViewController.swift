@@ -52,10 +52,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let day = 30 - Int((Date().timeIntervalSince1970 - dateStarRealm.timeIntervalSince1970) / 60 / 1440)
         title = "Things ToDo! \(day) ngày"
         self.navigationController?.navigationBar.barTintColor = UIColor.orange
-        
-        self.navigationController?.navigationBar.isUserInteractionEnabled = true
-        self.navigationController?.navigationBar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedNavigationBar(tapGestureRecognizer:))))
-        
+                
         textSearch.delegate = self
         textSearch.borderStyle = .roundedRect
         textSearch.placeholder = "Tìm kiếm"
@@ -77,7 +74,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(leftBarButtonDidClick))
+        navigationItem.leftBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonDidClick)),
+            UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeButtonDidClick))
+        ]
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(rightBarButtonDidClick))
         
         notificationToken = items.observe { [weak self] (changes) in
@@ -116,7 +116,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    @objc func tappedNavigationBar(tapGestureRecognizer: UITapGestureRecognizer) {
+    @objc func composeButtonDidClick() {
         self.navigationController!.pushViewController(DrawViewController(), animated: true);
     }
     
@@ -152,7 +152,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         notificationToken?.invalidate()
     }
     
-    @objc func leftBarButtonDidClick() {
+    @objc func addButtonDidClick() {
         let item = Item()
         showPopup(item: item)
     }
