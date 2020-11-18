@@ -9,8 +9,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#00BCD4"
+        android:layout_height="0dp"
+        android:background="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,51 +24,37 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="1dp"
-        android:background="#8BC34A"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"></LinearLayout>
-
-    <HorizontalScrollView
-        android:id="@+id/scrollView3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#FF000000"
-        android:fillViewport="true"
+        android:layout_height="42dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.exemple.mymusic.MinimapView
+            android:id="@+id/minimapView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:minimapBackgroundColor="@color/colortransparent"
+            app:minimapBorderWidth="0dp"
+            app:minimapIndicatorColor="#80000000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/colorBackground"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <include layout="@layout/layout_first_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards" />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_middle_fretboards"  />
-
-            <include layout="@layout/layout_last_fretboards"  />
-        </LinearLayout>
-    </HorizontalScrollView>
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

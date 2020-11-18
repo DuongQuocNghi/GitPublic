@@ -3,4 +3,15 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colortransparent">#00FFFFFF</color>
+
+    <color name="colorWhiteFretboardSelected">#FFC8C8C8</color>
+    <color name="colorBlackFretboardSelected">#FF505050</color>
+
+    <color name="colorBackground">#d1d9d9</color>
+    <color name="colorMinimap">#40455a64</color>
+    <color name="colorLines">#ffffff</color>
+
 </resources>
