@@ -15,7 +15,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            style="@style/WhiteFretboard" />
+            android:id="@+id/fretboardOne"
+            style="@style/WhiteFretboard"
+            android:gravity="bottom|clip_horizontal|center_horizontal"
+            android:text="C0" />
 
         <Button
             style="@style/WhiteFretboard" />

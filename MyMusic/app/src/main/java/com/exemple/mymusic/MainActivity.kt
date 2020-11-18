@@ -3,6 +3,7 @@ package com.exemple.mymusic
 import android.os.Bundle
 import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import eu.acolombo.minimap.example.FretboardAdapter
 import eu.acolombo.minimap.example.data.MiddleFretboard
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,7 +19,9 @@ class MainActivity : AppCompatActivity() {
         val displayMetrics: DisplayMetrics = resources.displayMetrics
         minimapView.maxSize = displayMetrics.widthPixels.toFloat()
 
-        val layoutManager = FixedGridLayoutManager().apply { setTotalColumnCount(9) }
+//        val layoutManager = FixedGridLayoutManager().apply { setTotalColumnCount(9) }
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
         val adapter = FretboardAdapter(getMiddleFretboards().flatten().toMutableList())
 
         recyclerView.layoutManager = layoutManager
